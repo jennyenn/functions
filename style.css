@@ -4,12 +4,15 @@ body{
 }
 
 section{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(auto-fit, 16vw);
+    justify-items: center;
+    align-items: center;
 }
 
 img {
-    width: 18vw;
-    height: 18vh;
+    width: 16vw;
+    height: 16vw;
     object-fit: contain;
 }
