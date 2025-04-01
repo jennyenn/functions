@@ -14,13 +14,13 @@
 		<form>
 			<fieldset>
 				<legend>Main Course :</legend>
-				<input id="main-1" name="main" type="checkbox" value="1">
+				<input id="main-1" name="main" type="checkbox" value="1" onchange="toggleVisibility('toast')">
 				<label for="main-1">Toast</label><br>
-				<input id="main-2" name="main" type="checkbox" value="2">
+				<input id="main-2" name="main" type="checkbox" value="2" onchange="toggleVisibility('bagel')" >
 				<label for="main-2">Bagel</label><br>
-				<input id="main-3" name="main" type="checkbox" value="3">
+				<input id="main-3" name="main" type="checkbox" value="3" onchange="toggleVisibility('croissant')">
 				<label for="main-3">Croissant</label><br>
-				<input id="main-4" name="main" type="checkbox" value="4">
+				<input id="main-4" name="main" type="checkbox" value="4" onchange="toggleVisibility('pancake')">
 				<label for="main-4">Pancake</label><br>
 				<input id="main-5" name="main" type="checkbox" value="5">
 				<label for="main-5">Rice</label><br>
@@ -97,7 +97,12 @@
 				<button type="reset"> Reset </button>
 				<button> Start Pairing! </button>
 			</section>
-			
 		</form>
+		<section>
+			<img id="toast" src="assets/toast.png"  style="display:none"/>
+			<img id="bagel" src="assets/bagel.png"  style="display:none"/>
+			<img id="croissant" src="assets/croissant.png"  style="display:none"/>
+			<img id="pancake" src="assets/pancake.png"  style="display:none"/>
+		</section>
 	</body>
 </html>
