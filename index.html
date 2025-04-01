@@ -12,63 +12,87 @@
 		<h1>Your Personalized Brunch Inspiration!</h1>
 		<p>Select the ingredients you have, and we'll help you create the perfect brunch combination.</p>
 		<form>
-			<section>
-				<label for="main"> Main Course : </label>
-				<select id="main" name="main" multiple>
-					<option><input type="radio" > Toast </option>
-					<option><input type="radio" > Bagel </option>
-					<option><input type="radio" > Croissant </option>
-					<option><input type="radio" > Pancake </option>
-					<option><input type="radio" > Rice </option>
-					<option><input type="radio" > Taro Bun </option>
-					<option><input type="radio" > Brown Sugar Steamed Bread </option>
-					<option><input type="radio" > Scallion Pancake </option>
-				</select>
-			</section>
-			<section>
-				<label for="meat"> Meat : </label>
-				<select id="meat" name="meat" multiple>
-					<option> Bacon </option>
-					<option> Turkey Breast </option>
-					<option> Chicken Breast </option>
-					<option> Ham </option>
-					<option> Salmon </option>
-					<option> Tuna </option>
-					<option> Steak </option>
-				</select>
-			</section>
-			<section>
-				<label for="vegetable"> Vegetable : </label>
-				<select id="vegetable" name="vegetable" multiple>
-					<option> Tomato </option>
-					<option> Mushroom </option>
-					<option> Avocado </option>
-					<option> Spinach </option>
-					<option> Lettuce </option>
-				</select>
-			</section>
-			<section>
-				<label for="fruit"> Fruit : </label>
-				<select id="fruit" name="fruit" multiple>
-					<option> Blueberry </option>
-					<option> Strawberry </option>
-					<option> Banana </option>
-					<option> Grapefruit </option>
-					<option> Kiwi </option>
-				</select>
-			</section>
-			<section>
-				<label for="other"> Extras & Toppings : </label>
-				<select id="other" name="other" multiple>
-					<option> Sliced Cheese </option>
-					<option> Mozzarella Cheese </option>
-					<option> Egg </option>
-					<option> Yorgurt </option>
-					<option> Nuts </option>
-					<option> Gronola </option>
-					<option> Cereal </option>
-				</select>
-			</section>
+			<fieldset>
+				<legend>Main Course :</legend>
+				<input id="main-1" name="main" type="checkbox" value="1">
+				<label for="main-1">Toast</label><br>
+				<input id="main-2" name="main" type="checkbox" value="2">
+				<label for="main-2">Bagel</label><br>
+				<input id="main-3" name="main" type="checkbox" value="3">
+				<label for="main-3">Croissant</label><br>
+				<input id="main-4" name="main" type="checkbox" value="4">
+				<label for="main-4">Pancake</label><br>
+				<input id="main-5" name="main" type="checkbox" value="5">
+				<label for="main-5">Rice</label><br>
+				<input id="main-6" name="main" type="checkbox" value="6">
+				<label for="main-6">Taro Bun</label><br>
+				<input id="main-7" name="main" type="checkbox" value="7">
+				<label for="main-7">Brown Sugar Steamed Bread</label><br>
+				<input id="main-8" name="main" type="checkbox" value="8">
+				<label for="main-8">Scallion Pancake</label><br>
+			</fieldset>
+			<fieldset>
+				<legend>Meat :</legend>
+				<input id="meat-1" name="meat" type="checkbox" value="1">
+				<label for="meat-1">Bacon</label><br>
+				<input id="meat-2" name="meat" type="checkbox" value="2">
+				<label for="meat-2">Turkey Breast</label><br>
+				<input id="meat-3" name="meat" type="checkbox" value="3">
+				<label for="meat-3">Chicken Breast</label><br>
+				<input id="meat-4" name="meat" type="checkbox" value="4">
+				<label for="meat-4">Ham</label><br>
+				<input id="meat-5" name="meat" type="checkbox" value="5">
+				<label for="meat-5">Salmon</label><br>
+				<input id="meat-6" name="meat" type="checkbox" value="6">
+				<label for="meat-6">Tuna</label><br>
+				<input id="meat-7" name="meat" type="checkbox" value="7">
+				<label for="meat-7">Steak</label><br>
+			</fieldset>
+			<fieldset>
+				<legend>Vegetable :</legend>
+				<input id="vegetable-1" name="vegetable" type="checkbox" value="1">
+				<label for="vegetable-1">Tomato</label><br>
+				<input id="vegetable-2" name="vegetable" type="checkbox" value="2">
+				<label for="vegetable-2">Mushroom</label><br>
+				<input id="vegetable-3" name="vegetable" type="checkbox" value="3">
+				<label for="vegetable-3">Avocado</label><br>
+				<input id="vegetable-4" name="vegetable" type="checkbox" value="4">
+				<label for="vegetable-4">Spinach</label><br>
+				<input id="vegetable-5" name="vegetable" type="checkbox" value="5">
+				<label for="vegetable-5">Lettuce</label><br>
+			</fieldset>
+			<fieldset>
+				<legend>Fruit :</legend>
+				<input id="fruit-1" name="fruit" type="checkbox" value="1">
+				<label for="fruit-1">Blueberry</label><br>
+				<input id="fruit-2" name="fruit" type="checkbox" value="2">
+				<label for="fruit-2">Strawberry</label><br>
+				<input id="fruit-3" name="fruit" type="checkbox" value="3">
+				<label for="fruit-3">Banana</label><br>
+				<input id="fruit-4" name="fruit" type="checkbox" value="4">
+				<label for="fruit-4">Grapefruit</label><br>
+				<input id="fruit-5" name="fruit" type="checkbox" value="5">
+				<label for="fruit-5">Kiwi</label><br>
+				<input id="fruit-6" name="fruit" type="checkbox" value="6">
+				<label for="fruit-6">Apple</label><br>
+			</fieldset>
+			<fieldset>
+				<legend>Extras & Toppings :</legend>
+				<input id="other-1" name="other" type="checkbox" value="1">
+				<label for="other-1">Sliced Cheese</label><br>
+				<input id="other-2" name="other" type="checkbox" value="2">
+				<label for="other-2">Mozzarella Cheese</label><br>
+				<input id="other-3" name="other" type="checkbox" value="3">
+				<label for="other-3">Egg</label><br>
+				<input id="other-4" name="other" type="checkbox" value="4">
+				<label for="other-4">Yorgurt</label><br>
+				<input id="other-5" name="other" type="checkbox" value="5">
+				<label for="other-5">Nuts</label><br>
+				<input id="other-6" name="other" type="checkbox" value="6">
+				<label for="other-6">Gronola</label><br>
+				<input id="other-7" name="other" type="checkbox" value="7">
+				<label for="other-7">Cereal</label><br>
+			</fieldset>
 			<section>
 				<button type="reset"> Reset </button>
 				<button> Start Pairing! </button>
