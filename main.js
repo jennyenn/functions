@@ -2,7 +2,7 @@ window.stateCallback = () => {
 	console.log('Something has changed!')
 }
 
-mainArray = [
+let MainArray = [
     {
         "name":"Toast",
         "image": " assets/toast.png ",
@@ -22,8 +22,15 @@ mainArray = [
         "name":"Pancake",
         "image": " assets/pancake.png ",
         "calories": 120
+    },
+    {
+        "name":"Rice",
+        "image": " assets/rice.png ",
+        "calories": 120
     }
-]
+];
+
+let selectedMainArray = [];
 
 
 //I wnat to show images when checkboxed are checked
