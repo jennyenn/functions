@@ -192,20 +192,21 @@ function toggleVisibility(id) {
 
     if (img.style.display=="block") { 
             img.style.display="none";
+            console.log("remove",id);
 
             // remove specific items from an array by value
             //https://sentry.io/answers/remove-specific-item-from-array/
             //https://stackoverflow.com/questions/5767325/how-can-i-remove-a-specific-item-from-an-array-in-javascript/70850094
-            selectedMainArray = selectedMainArray.filter(main1 => main1.id !== id);
-            selectedMeatArray = selectedMeatArray.filter(meat1 => meat1.id !== id);
-            selectedVegetableArray = selectedVegetableArray.filter(vegetable1 => vegetable1.id !== id);
+            selectedMainArray = selectedMainArray.filter(main => main.id !== id);
+            selectedMeatArray = selectedMeatArray.filter(meat => meat.id !== id);
+            selectedVegetableArray = selectedVegetableArray.filter(vegetable => vegetable.id !== id);
             // selectedFruitArray = selectedFruitArray.filter(fruit => fruit.id !== id);
             // selectedToppingsArray = selectedToppingsArray.filter(toppings => toppings.id !== id);
-            console.log("remove",id);
+           
       }
       else {
             img.style.display="block";
-            selectedMainArray.push(main);
+             if (main) selectedMainArray.push(main);
             selectedMeatArray.push(meat);
             selectedVegetableArray.push(vegetable);
             // selectedFruitArray.push(fruit);
