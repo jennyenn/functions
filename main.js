@@ -241,7 +241,8 @@ function startpairing(){
     // display the randomly selected one!
     if (selectedMainimg) {
         selectedMainimg.style.display = "block";
+        console.log(selectedMainArray[randomMain].name,selectedMainArray[randomMain].calories)
       }
-      
+
 }
 
