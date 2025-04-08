@@ -51,31 +51,37 @@ let selectedMainArray = [];
 
 let MeatArray = [
     {
+        "id" : "bacon",
         "name":"Bacon",
         "image": " assets/bacon.png ",
         "calories": 161
     },
     {
+        "id" : "turkeybreast",
         "name":"Turkey Breast",
         "image": " assets/turkeybreast.png ",
         "calories": 106
     },
     {
+        "id" : "chickenbreast",
         "name":"Chicken Breast",
         "image": " assets/chickenbreast.png ",
         "calories": 164
     },
     {
+        "id" : "ham",
         "name":"Ham",
         "image": " assets/ham.png ",
         "calories": 145
     },
     {
+        "id" : "salmon",
         "name":"Salmon",
         "image": " assets/salmon.png ",
         "calories": 234
     },
     {
+        "id" : "tuna",
         "name":"Tuna",
         "image": " assets/tuna.png ",
         "calories": 132
@@ -86,26 +92,31 @@ let selectedMeatArray = [];
 
 let VegetableArray = [
     {
+        "id" : "tomato",
         "name":"Tomato",
         "image": " assets/tomato.png ",
         "calories": 22
     },
     {
+        "id" : "mushroom",
         "name":"Mushroom",
         "image": " assets/mushroom.png ",
         "calories": 22
     },
     {
+        "id" : "avocado",
         "name":"Avocado",
         "image": " assets/avocado.png ",
         "calories": 50
     },
     {
+        "id" : "spinach",
         "name":"Spinach",
         "image": " assets/spinach.png ",
         "calories": 23
     },
     {
+        "id" : "lettuce",
         "name":"Lettuce",
         "image": " assets/lettuce.png ",
         "calories": 14
@@ -116,31 +127,37 @@ let selectedVegetableArray = [];
 
 let FruitArray = [
     {
+        "id" : "blueberry",
         "name":"Blueberry",
         "image": " assets/blueberry.png ",
         "calories": 29
     },
     {
+        "id" : "strawberry",
         "name":"Strawberry",
         "image": " assets/strawberry.png ",
         "calories": 20
     },
     {
+        "id" : "banana",
         "name":"Banana",
         "image": " assets/banana.png ",
         "calories": 88
     },
     {
+        "id" : "grape",
         "name":"Grape",
         "image": " assets/grape.png ",
         "calories": 66
     },
     {
+        "id" : "kiwi",
         "name":"Kiwi",
         "image": " assets/kiwi.png ",
         "calories": 60
     },
     {
+        "id" : "apple",
         "name":"Apple",
         "image": " assets/apple.png ",
         "calories": 52
@@ -149,45 +166,52 @@ let FruitArray = [
 
 let selectedFruitArray = [];
 
-let Toppings = [
+let ToppingsArray = [
     {
+        "id" : "slicedcheese",
         "name":"Sliced Cheese",
         "image": " assets/slicedcheese.png ",
         "calories": 103
     },
     {
+        "id" : "mozzarellacheese",
         "name":"Mozzarella Cheese",
         "image": " assets/mozzarellacheese.png ",
         "calories": 85
     },
     {
+        "id" : "egg",
         "name":"Egg",
         "image": " assets/egg.png ",
         "calories": 72
     },
     {
+        "id" : "yorgurt",
         "name":"Yorgurt",
         "image": " assets/yorgurt.png ",
         "calories": 150
     },
     {
+        "id" : "nuts",
         "name":"Nuts",
         "image": " assets/nuts.png ",
         "calories": 187
     },
     {
+        "id" : "gronola",
         "name":"Gronola",
         "image": " assets/gronola.png ",
         "calories": 140
     },
     {
+        "id" : "cereal",
         "name":"Cereal",
         "image": " assets/cereal.png ",
         "calories": 110
     }
 ]
 
-let selectedToppings = [];
+let selectedToppingsArray = [];
 
 
 //I wnat to show images when checkboxed are checked
@@ -201,6 +225,10 @@ function toggleVisibility(id) {
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
     // find "id" in the array
     const main = MainArray.find(main => main.id === id);
+    const meat = MeatArray.find(meat => meat.id === id);
+    // const vegetable = VegetableArray.find(vegetable => vegetable.id === id);
+    // const fruit = FruitArray.find(fruit => fruit.id === id);
+    // const toppings = ToppingsArray.find(toppings => toppings.id === id);
 
     var img = document.getElementById(id);
 
@@ -210,11 +238,20 @@ function toggleVisibility(id) {
             // remove specific items from an array by value
             //https://sentry.io/answers/remove-specific-item-from-array/
             //https://stackoverflow.com/questions/5767325/how-can-i-remove-a-specific-item-from-an-array-in-javascript/70850094
-            selectedMainArray = selectedMainArray.filter(main => main.id === id);
+            selectedMainArray = selectedMainArray.filter(main1 => main1.id !== id);
+            selectedMeatArray = selectedMeatArray.filter(meat1 => meat1.id !== id);
+            // selectedVegetableArray = selectedVegetableArray.filter(vegetable => vegetable.id === id);
+            // selectedFruitArray = selectedFruitArray.filter(fruit => fruit.id === id);
+            // selectedToppingsArray = selectedToppingsArray.filter(toppings => toppings.id === id);
+            console.log("remove",id);
       }
       else {
             img.style.display="block";
             selectedMainArray.push(main);
+            selectedMeatArray.push(meat);
+            // selectedVegetableArray.push(vegetable);
+            // selectedFruitArray.push(fruit);
+            // selectedToppingsArray.push(toppings);
             console.log(id);
       }
 }
@@ -231,7 +268,19 @@ function startpairing(){
     // get ramdom value from one array
     const randomMain = Math.floor(Math.random() * selectedMainArray.length);
     // get the selectedMain's id
-    const selectedMainimg = document.getElementById(selectedMainArray[randomMain].id)
+    const selectedMainimg = document.getElementById(selectedMainArray[randomMain].id);
+
+    const randomMeat = Math.floor(Math.random() * selectedMeatArray.length);
+    const selectedMeatimg = document.getElementById(selectedMeatArray[randomMeat].id);
+
+    // const randomVegetable = Math.floor(Math.random() * selectedVegetableArray.length);
+    // const selectedVegetableimg = document.getElementById(selectedVegetableArray[randomVegetable].id);
+
+    // const randomFruit = Math.floor(Math.random() * selectedFruitArray.length);
+    // const selectedFruitimg = document.getElementById(selectedFruitArray[randomFruit].id);
+
+    // const randomToppings = Math.floor(Math.random() * selectedToppingsArray.length);
+    // const selectedToppingsimg = document.getElementById(selectedToppingsArray[randomToppings].id);
 
     // hide all img first
     document.querySelectorAll("#selected-images img").forEach(img => {
@@ -242,7 +291,23 @@ function startpairing(){
     if (selectedMainimg) {
         selectedMainimg.style.display = "block";
         console.log(selectedMainArray[randomMain].name,selectedMainArray[randomMain].calories)
-      }
+    }
 
+    if (selectedMeatimg) {
+        selectedMeatimg.style.display = "block";
+        console.log(selectedMeatArray[randomMeat].name,selectedMeatArray[randomMeat].calories)
+    }
+
+    // if (selectedVegetableimg) {
+    //     selectedVegetableimg.style.display = "block";
+    // }
+
+    // if (selectedFruitimg) {
+    //     selectedFruitimg.style.display = "block";
+    // }
+
+    // if (selectedToppingsimg) {
+    //     selectedToppingsimg.style.display = "block";
+    // }
 }
 
