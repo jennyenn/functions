@@ -206,7 +206,7 @@ function toggleVisibility(id) {
       }
       else {
             img.style.display="block";
-             if (main) selectedMainArray.push(main);
+            selectedMainArray.push(main);
             selectedMeatArray.push(meat);
             selectedVegetableArray.push(vegetable);
             // selectedFruitArray.push(fruit);
@@ -227,13 +227,14 @@ function startpairing(){
     // get ramdom value from one array
     const randomMain = Math.floor(Math.random() * selectedMainArray.length);
     // get the selectedMain's id
-    const selectedMainimg = document.getElementById(selectedMainArray[randomMain].id);
+    const selectedMain = selectedMainArray[randomMain];
+    const selectedMainimg = document.getElementById(selectedMain.id);
 
-    const randomMeat = Math.floor(Math.random() * selectedMeatArray.length);
-    const selectedMeatimg = document.getElementById(selectedMeatArray[randomMeat].id);
+    // const randomMeat = Math.floor(Math.random() * selectedMeatArray.length);
+    // const selectedMeatimg = document.getElementById(selectedMeatArray[randomMeat].id);
 
-    const randomVegetable = Math.floor(Math.random() * selectedVegetableArray.length);
-    const selectedVegetableimg = document.getElementById(selectedVegetableArray[randomVegetable].id);
+    // const randomVegetable = Math.floor(Math.random() * selectedVegetableArray.length);
+    // const selectedVegetableimg = document.getElementById(selectedVegetableArray[randomVegetable].id);
 
     // const randomFruit = Math.floor(Math.random() * selectedFruitArray.length);
     // const selectedFruitimg = document.getElementById(selectedFruitArray[randomFruit].id);
@@ -242,9 +243,9 @@ function startpairing(){
     // const selectedToppingsimg = document.getElementById(selectedToppingsArray[randomToppings].id);
 
     // hide all img first
-    document.querySelectorAll("#selected-images img").forEach(img => {
+    document.querySelectorAll("img").forEach(img => {
         img.style.display = "none";
-    })
+    });
 
     // display the randomly selected one!
     if (selectedMainimg) {
@@ -252,15 +253,15 @@ function startpairing(){
         console.log(selectedMainArray[randomMain].name,selectedMainArray[randomMain].calories)
     }
 
-    if (selectedMeatimg) {
-        selectedMeatimg.style.display = "block";
-        console.log(selectedMeatArray[randomMeat].name,selectedMeatArray[randomMeat].calories)
-    }
+    // if (selectedMeatimg) {
+    //     selectedMeatimg.style.display = "block";
+    //     console.log(selectedMeatArray[randomMeat].name,selectedMeatArray[randomMeat].calories)
+    // }
 
-    if (selectedVegetableimg) {
-        selectedVegetableimg.style.display = "block";
-        console.log(selectedVegetableArray[randomVegetable].name,selectedVegetableArray[randomVegetable].calories)
-    }
+    // if (selectedVegetableimg) {
+    //     selectedVegetableimg.style.display = "block";
+    //     console.log(selectedVegetableArray[randomVegetable].name,selectedVegetableArray[randomVegetable].calories)
+    // }
 
     // if (selectedFruitimg) {
     //     selectedFruitimg.style.display = "block";
