@@ -11,89 +11,88 @@
 	<body>
 		<h1>Your Personalized Brunch Inspiration!</h1>
 		<p>Select the ingredients you have, and we'll help you create the perfect brunch combination.</p>
-		<form>
-			<fieldset>
-				<legend>Main Course :</legend>
-				<input id="main-1" name="main" type="checkbox" value="1" onchange="toggleVisibility('toast')">
-				<label for="main-1">Toast</label><br>
-				<input id="main-2" name="main" type="checkbox" value="2" onchange="toggleVisibility('bagel')" >
-				<label for="main-2">Bagel</label><br>
-				<input id="main-3" name="main" type="checkbox" value="3" onchange="toggleVisibility('croissant')">
-				<label for="main-3">Croissant</label><br>
-				<input id="main-4" name="main" type="checkbox" value="4" onchange="toggleVisibility('pancake')">
-				<label for="main-4">Pancake</label><br>
-				<input id="main-5" name="main" type="checkbox" value="5" onchange="toggleVisibility('torobun')">
-				<label for="main-5">Taro Bun</label><br>
-				<input id="main-6" name="main" type="checkbox" value="6" onchange="toggleVisibility('brownsugarsteamedbread')">
-				<label for="main-6">Brown Sugar Steamed Bread</label><br>
-				<input id="main-7" name="main" type="checkbox" value="7" onchange="toggleVisibility('scallionpancake')">
-				<label for="main-7">Scallion Pancake</label><br>
-			</fieldset>
-			<fieldset>
-				<legend>Meat :</legend>
-				<input id="meat-1" name="meat" type="checkbox" value="1" onchange="toggleVisibility('bacon')">
-				<label for="meat-1">Bacon</label><br>
-				<input id="meat-2" name="meat" type="checkbox" value="2" onchange="toggleVisibility('turkeybreast')">
-				<label for="meat-2">Turkey Breast</label><br>
-				<input id="meat-3" name="meat" type="checkbox" value="3" onchange="toggleVisibility('chickenbreast')">
-				<label for="meat-3">Chicken Breast</label><br>
-				<input id="meat-4" name="meat" type="checkbox" value="4" onchange="toggleVisibility('ham')">
-				<label for="meat-4">Ham</label><br>
-				<input id="meat-5" name="meat" type="checkbox" value="5" onchange="toggleVisibility('salmon')">
-				<label for="meat-5">Salmon</label><br>
-				<input id="meat-6" name="meat" type="checkbox" value="6" onchange="toggleVisibility('tuna')">
-				<label for="meat-6">Tuna</label><br>
-			</fieldset>
-			<fieldset>
-				<legend>Vegetable :</legend>
-				<input id="vegetable-1" name="vegetable" type="checkbox" value="1" onchange="toggleVisibility('tomato')">
-				<label for="vegetable-1">Tomato</label><br>
-				<input id="vegetable-2" name="vegetable" type="checkbox" value="2" onchange="toggleVisibility('mushroom')">
-				<label for="vegetable-2">Mushroom</label><br>
-				<input id="vegetable-3" name="vegetable" type="checkbox" value="3" onchange="toggleVisibility('avocado')">
-				<label for="vegetable-3">Avocado</label><br>
-				<input id="vegetable-4" name="vegetable" type="checkbox" value="4" onchange="toggleVisibility('spinach')">
-				<label for="vegetable-4">Spinach</label><br>
-				<input id="vegetable-5" name="vegetable" type="checkbox" value="5" onchange="toggleVisibility('lettuce')">
-				<label for="vegetable-5">Lettuce</label><br>
-			</fieldset>
-			<fieldset>
-				<legend>Fruit :</legend>
-				<input id="fruit-1" name="fruit" type="checkbox" value="1" onchange="toggleVisibility('blueberry')">
-				<label for="fruit-1">Blueberry</label><br>
-				<input id="fruit-2" name="fruit" type="checkbox" value="2" onchange="toggleVisibility('strawberry')">
-				<label for="fruit-2">Strawberry</label><br>
-				<input id="fruit-3" name="fruit" type="checkbox" value="3" onchange="toggleVisibility('banana')">
-				<label for="fruit-3">Banana</label><br>
-				<input id="fruit-4" name="fruit" type="checkbox" value="4" onchange="toggleVisibility('grape')">
-				<label for="fruit-4">Grape</label><br>
-				<input id="fruit-5" name="fruit" type="checkbox" value="5" onchange="toggleVisibility('kiwi')">
-				<label for="fruit-5">Kiwi</label><br>
-				<input id="fruit-6" name="fruit" type="checkbox" value="6" onchange="toggleVisibility('apple')">
-				<label for="fruit-6">Apple</label><br>
-			</fieldset>
-			<fieldset>
-				<legend>Extras & Toppings :</legend>
-				<input id="other-1" name="other" type="checkbox" value="1" onchange="toggleVisibility('slicedcheese')">
-				<label for="other-1">Sliced Cheese</label><br>
-				<input id="other-2" name="other" type="checkbox" value="2" onchange="toggleVisibility('mazzarellacheese')">
-				<label for="other-2">Mozzarella Cheese</label><br>
-				<input id="other-3" name="other" type="checkbox" value="3" onchange="toggleVisibility('egg')">
-				<label for="other-3">Egg</label><br>
-				<input id="other-4" name="other" type="checkbox" value="4" onchange="toggleVisibility('yorgurt')">
-				<label for="other-4">Yorgurt</label><br>
-				<input id="other-5" name="other" type="checkbox" value="5" onchange="toggleVisibility('nuts')">
-				<label for="other-5">Nuts</label><br>
-				<input id="other-6" name="other" type="checkbox" value="6" onchange="toggleVisibility('gronola')">
-				<label for="other-6">Gronola</label><br>
-				<input id="other-7" name="other" type="checkbox" value="7" onchange="toggleVisibility('cereal')">
-				<label for="other-7">Cereal</label><br>
-			</fieldset>
-			<section>
-				<button type="reset"> Reset </button>	
-			</section>
-		</form>
-		<button onclick="startpairing()"> Start Pairing! </button>
+		<section>
+			<form>
+				<fieldset>
+					<legend>Main Course :</legend>
+					<input id="main-1" name="main" type="checkbox" value="1" onchange="toggleVisibility('toast')">
+					<label for="main-1">Toast</label><br>
+					<input id="main-2" name="main" type="checkbox" value="2" onchange="toggleVisibility('bagel')" >
+					<label for="main-2">Bagel</label><br>
+					<input id="main-3" name="main" type="checkbox" value="3" onchange="toggleVisibility('croissant')">
+					<label for="main-3">Croissant</label><br>
+					<input id="main-4" name="main" type="checkbox" value="4" onchange="toggleVisibility('pancake')">
+					<label for="main-4">Pancake</label><br>
+					<input id="main-5" name="main" type="checkbox" value="5" onchange="toggleVisibility('torobun')">
+					<label for="main-5">Taro Bun</label><br>
+					<input id="main-6" name="main" type="checkbox" value="6" onchange="toggleVisibility('brownsugarsteamedbread')">
+					<label for="main-6">Brown Sugar Steamed Bread</label><br>
+					<input id="main-7" name="main" type="checkbox" value="7" onchange="toggleVisibility('scallionpancake')">
+					<label for="main-7">Scallion Pancake</label><br>
+				</fieldset>
+				<fieldset>
+					<legend>Meat :</legend>
+					<input id="meat-1" name="meat" type="checkbox" value="1" onchange="toggleVisibility('bacon')">
+					<label for="meat-1">Bacon</label><br>
+					<input id="meat-2" name="meat" type="checkbox" value="2" onchange="toggleVisibility('turkeybreast')">
+					<label for="meat-2">Turkey Breast</label><br>
+					<input id="meat-3" name="meat" type="checkbox" value="3" onchange="toggleVisibility('chickenbreast')">
+					<label for="meat-3">Chicken Breast</label><br>
+					<input id="meat-4" name="meat" type="checkbox" value="4" onchange="toggleVisibility('ham')">
+					<label for="meat-4">Ham</label><br>
+					<input id="meat-5" name="meat" type="checkbox" value="5" onchange="toggleVisibility('salmon')">
+					<label for="meat-5">Salmon</label><br>
+					<input id="meat-6" name="meat" type="checkbox" value="6" onchange="toggleVisibility('tuna')">
+					<label for="meat-6">Tuna</label><br>
+				</fieldset>
+				<fieldset>
+					<legend>Vegetable :</legend>
+					<input id="vegetable-1" name="vegetable" type="checkbox" value="1" onchange="toggleVisibility('tomato')">
+					<label for="vegetable-1">Tomato</label><br>
+					<input id="vegetable-2" name="vegetable" type="checkbox" value="2" onchange="toggleVisibility('mushroom')">
+					<label for="vegetable-2">Mushroom</label><br>
+					<input id="vegetable-3" name="vegetable" type="checkbox" value="3" onchange="toggleVisibility('avocado')">
+					<label for="vegetable-3">Avocado</label><br>
+					<input id="vegetable-4" name="vegetable" type="checkbox" value="4" onchange="toggleVisibility('spinach')">
+					<label for="vegetable-4">Spinach</label><br>
+					<input id="vegetable-5" name="vegetable" type="checkbox" value="5" onchange="toggleVisibility('lettuce')">
+					<label for="vegetable-5">Lettuce</label><br>
+				</fieldset>
+				<fieldset>
+					<legend>Fruit :</legend>
+					<input id="fruit-1" name="fruit" type="checkbox" value="1" onchange="toggleVisibility('blueberry')">
+					<label for="fruit-1">Blueberry</label><br>
+					<input id="fruit-2" name="fruit" type="checkbox" value="2" onchange="toggleVisibility('strawberry')">
+					<label for="fruit-2">Strawberry</label><br>
+					<input id="fruit-3" name="fruit" type="checkbox" value="3" onchange="toggleVisibility('banana')">
+					<label for="fruit-3">Banana</label><br>
+					<input id="fruit-4" name="fruit" type="checkbox" value="4" onchange="toggleVisibility('grape')">
+					<label for="fruit-4">Grape</label><br>
+					<input id="fruit-5" name="fruit" type="checkbox" value="5" onchange="toggleVisibility('kiwi')">
+					<label for="fruit-5">Kiwi</label><br>
+					<input id="fruit-6" name="fruit" type="checkbox" value="6" onchange="toggleVisibility('apple')">
+					<label for="fruit-6">Apple</label><br>
+				</fieldset>
+				<fieldset>
+					<legend>Extras & Toppings :</legend>
+					<input id="other-1" name="other" type="checkbox" value="1" onchange="toggleVisibility('slicedcheese')">
+					<label for="other-1">Sliced Cheese</label><br>
+					<input id="other-2" name="other" type="checkbox" value="2" onchange="toggleVisibility('mazzarellacheese')">
+					<label for="other-2">Mozzarella Cheese</label><br>
+					<input id="other-3" name="other" type="checkbox" value="3" onchange="toggleVisibility('egg')">
+					<label for="other-3">Egg</label><br>
+					<input id="other-4" name="other" type="checkbox" value="4" onchange="toggleVisibility('yorgurt')">
+					<label for="other-4">Yorgurt</label><br>
+					<input id="other-5" name="other" type="checkbox" value="5" onchange="toggleVisibility('nuts')">
+					<label for="other-5">Nuts</label><br>
+					<input id="other-6" name="other" type="checkbox" value="6" onchange="toggleVisibility('gronola')">
+					<label for="other-6">Gronola</label><br>
+					<input id="other-7" name="other" type="checkbox" value="7" onchange="toggleVisibility('cereal')">
+					<label for="other-7">Cereal</label><br>
+				</fieldset>
+			</form>
+			<button onclick="startpairing()"> Start Pairing! </button>
+		</section>
 		<section id="selected-images">
 			<img id="toast"  src="assets/toast.png"  style="display:none"/>
 			<img id="bagel"  src="assets/bagel.png"  style="display:none"/>

@@ -230,15 +230,18 @@ function startpairing(){
     //https://stackoverflow.com/questions/4550505/getting-a-random-value-from-a-javascript-array
     // get ramdom value from one array
     const randomMain = Math.floor(Math.random() * selectedMainArray.length);
-    const selectedimg = document.getElementById( selectedMainArray[randomMain].id)
+    // get the selectedMain's id
+    const selectedMainimg = document.getElementById(selectedMainArray[randomMain].id)
 
+    // hide all img first
     document.querySelectorAll("#selected-images img").forEach(img => {
         img.style.display = "none";
     })
 
-    if (selectedimg) {
-        selectedimg.style.display = "block";
+    // display the randomly selected one!
+    if (selectedMainimg) {
+        selectedMainimg.style.display = "block";
       }
-
+      
 }
 
