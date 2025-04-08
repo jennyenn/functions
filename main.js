@@ -185,8 +185,8 @@ function toggleVisibility(id) {
     const main = MainArray.find(main => main.id === id);
     const meat = MeatArray.find(meat => meat.id === id);
     const vegetable = VegetableArray.find(vegetable => vegetable.id === id);
-    // const fruit = FruitArray.find(fruit => fruit.id === id);
-    // const toppings = ToppingsArray.find(toppings => toppings.id === id);
+    const fruit = FruitArray.find(fruit => fruit.id === id);
+    const toppings = ToppingsArray.find(toppings => toppings.id === id);
 
     var img = document.getElementById(id);
 
@@ -200,8 +200,8 @@ function toggleVisibility(id) {
             selectedMainArray = selectedMainArray.filter(main => main.id !== id);
             selectedMeatArray = selectedMeatArray.filter(meat => meat.id !== id);
             selectedVegetableArray = selectedVegetableArray.filter(vegetable => vegetable.id !== id);
-            // selectedFruitArray = selectedFruitArray.filter(fruit => fruit.id !== id);
-            // selectedToppingsArray = selectedToppingsArray.filter(toppings => toppings.id !== id);
+            selectedFruitArray = selectedFruitArray.filter(fruit => fruit.id !== id);
+            selectedToppingsArray = selectedToppingsArray.filter(toppings => toppings.id !== id);
            
       }
       else {
@@ -209,8 +209,8 @@ function toggleVisibility(id) {
             selectedMainArray.push(main);
             selectedMeatArray.push(meat);
             selectedVegetableArray.push(vegetable);
-            // selectedFruitArray.push(fruit);
-            // selectedToppingsArray.push(toppings);
+            selectedFruitArray.push(fruit);
+            selectedToppingsArray.push(toppings);
             console.log(id);
       }
 }
@@ -218,57 +218,49 @@ function toggleVisibility(id) {
 function startpairing(){
     console.log("clicked!");
 
-    if (selectedMainArray.length === 0) {
-        alert("Please select at least one item first!");
-        return;
-    }
-    
-    //https://stackoverflow.com/questions/4550505/getting-a-random-value-from-a-javascript-array
-    // get ramdom value from one array
-    const randomMain = Math.floor(Math.random() * selectedMainArray.length);
-    // get the selectedMain's id
-    const selectedMain = selectedMainArray[randomMain];
-    const selectedMainimg = document.getElementById(selectedMain.id);
-
-    // const randomMeat = Math.floor(Math.random() * selectedMeatArray.length);
-    // const selectedMeatimg = document.getElementById(selectedMeatArray[randomMeat].id);
-
-    // const randomVegetable = Math.floor(Math.random() * selectedVegetableArray.length);
-    // const selectedVegetableimg = document.getElementById(selectedVegetableArray[randomVegetable].id);
-
-    // const randomFruit = Math.floor(Math.random() * selectedFruitArray.length);
-    // const selectedFruitimg = document.getElementById(selectedFruitArray[randomFruit].id);
-
-    // const randomToppings = Math.floor(Math.random() * selectedToppingsArray.length);
-    // const selectedToppingsimg = document.getElementById(selectedToppingsArray[randomToppings].id);
+    // if (selectedMainArray.length === 0) {
+    //     alert("Please select at least one item first!");
+    //     return;
+    // }
 
     // hide all img first
     document.querySelectorAll("img").forEach(img => {
         img.style.display = "none";
     });
 
-    // display the randomly selected one!
-    if (selectedMainimg) {
-        selectedMainimg.style.display = "block";
-        console.log(selectedMainArray[randomMain].name,selectedMainArray[randomMain].calories)
+    if (selectedMainArray.length > 0){
+        //https://stackoverflow.com/questions/4550505/getting-a-random-value-from-a-javascript-array
+        // get ramdom value from one array
+        const randomMain = Math.floor(Math.random() * selectedMainArray.length);
+        // get the selectedMain's id
+        const selectedMain = selectedMainArray[randomMain];
+        const selectedMainimg = document.getElementById(selectedMain.id);
+
+        // display the randomly selected one!
+        if (selectedMainimg) {
+            selectedMainimg.style.display = "block";
+            console.log(selectedMain.name,selectedMain.calories)
+        }
+
+        console.log("selectedMainArray!");
     }
 
-    // if (selectedMeatimg) {
-    //     selectedMeatimg.style.display = "block";
-    //     console.log(selectedMeatArray[randomMeat].name,selectedMeatArray[randomMeat].calories)
-    // }
+    if (selectedMeatArray.length > 0){
+        //https://stackoverflow.com/questions/4550505/getting-a-random-value-from-a-javascript-array
+        // get ramdom value from one array
+        const randomMeat = Math.floor(Math.random() * selectedMeatArray.length);
+        // get the selectedMeat's id
+        const selectedMeat = selectedMeatArray[randomMeat];
+        const selectedMeatimg = document.getElementById(selectedMeat.id);
 
-    // if (selectedVegetableimg) {
-    //     selectedVegetableimg.style.display = "block";
-    //     console.log(selectedVegetableArray[randomVegetable].name,selectedVegetableArray[randomVegetable].calories)
-    // }
+        // display the randomly selected one!
+        if (selectedMeatimg) {
+            selectedMeatimg.style.display = "block";
+            console.log(selectedMeat.name,selectedMeat.calories)
+        }
 
-    // if (selectedFruitimg) {
-    //     selectedFruitimg.style.display = "block";
-    // }
+        console.log("selectedMeatArray!");
+    }
 
-    // if (selectedToppingsimg) {
-    //     selectedToppingsimg.style.display = "block";
-    // }
 }
 
