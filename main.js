@@ -215,6 +215,30 @@ function toggleVisibility(id) {
       else {
             img.style.display="block";
             selectedMainArray.push(main);
+            console.log(id);
       }
-  }
+}
+
+function startpairing(){
+    console.log("clicked!");
+
+    if (selectedMainArray.length === 0) {
+        alert("Please select at least one item first!");
+        return;
+    }
+    
+    //https://stackoverflow.com/questions/4550505/getting-a-random-value-from-a-javascript-array
+    // get ramdom value from one array
+    const randomMain = Math.floor(Math.random() * selectedMainArray.length);
+    const selectedimg = document.getElementById( selectedMainArray[randomMain].id)
+
+    document.querySelectorAll("#selected-images img").forEach(img => {
+        img.style.display = "none";
+    })
+
+    if (selectedimg) {
+        selectedimg.style.display = "block";
+      }
+
+}
 
