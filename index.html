@@ -23,12 +23,8 @@
 					<label for="main-3">Croissant</label><br>
 					<input id="main-4" name="main" type="checkbox" value="4" onchange="toggleVisibility('pancake')">
 					<label for="main-4">Pancake</label><br>
-					<input id="main-5" name="main" type="checkbox" value="5" onchange="toggleVisibility('torobun')">
-					<label for="main-5">Taro Bun</label><br>
-					<input id="main-6" name="main" type="checkbox" value="6" onchange="toggleVisibility('brownsugarsteamedbread')">
-					<label for="main-6">Brown Sugar Steamed Bread</label><br>
-					<input id="main-7" name="main" type="checkbox" value="7" onchange="toggleVisibility('scallionpancake')">
-					<label for="main-7">Scallion Pancake</label><br>
+					<input id="main-5" name="main" type="checkbox" value="5" onchange="toggleVisibility('steamedbread')">
+					<label for="main-5">Steamed Bread</label><br>
 				</fieldset>
 				<fieldset>
 					<legend>Meat :</legend>
@@ -36,14 +32,12 @@
 					<label for="meat-1">Bacon</label><br>
 					<input id="meat-2" name="meat" type="checkbox" value="2" onchange="toggleVisibility('turkeybreast')">
 					<label for="meat-2">Turkey Breast</label><br>
-					<input id="meat-3" name="meat" type="checkbox" value="3" onchange="toggleVisibility('chickenbreast')">
-					<label for="meat-3">Chicken Breast</label><br>
-					<input id="meat-4" name="meat" type="checkbox" value="4" onchange="toggleVisibility('ham')">
-					<label for="meat-4">Ham</label><br>
-					<input id="meat-5" name="meat" type="checkbox" value="5" onchange="toggleVisibility('salmon')">
-					<label for="meat-5">Salmon</label><br>
-					<input id="meat-6" name="meat" type="checkbox" value="6" onchange="toggleVisibility('tuna')">
-					<label for="meat-6">Tuna</label><br>
+					<input id="meat-3" name="meat" type="checkbox" value="3" onchange="toggleVisibility('ham')">
+					<label for="meat-3">Ham</label><br>
+					<input id="meat-4" name="meat" type="checkbox" value="4" onchange="toggleVisibility('salmon')">
+					<label for="meat-4">Salmon</label><br>
+					<input id="meat-5" name="meat" type="checkbox" value="5" onchange="toggleVisibility('tuna')">
+					<label for="meat-5">Tuna</label><br>
 				</fieldset>
 				<fieldset>
 					<legend>Vegetable :</legend>
@@ -70,25 +64,17 @@
 					<label for="fruit-4">Grape</label><br>
 					<input id="fruit-5" name="fruit" type="checkbox" value="5" onchange="toggleVisibility('kiwi')">
 					<label for="fruit-5">Kiwi</label><br>
-					<input id="fruit-6" name="fruit" type="checkbox" value="6" onchange="toggleVisibility('apple')">
-					<label for="fruit-6">Apple</label><br>
 				</fieldset>
 				<fieldset>
 					<legend>Extras & Toppings :</legend>
 					<input id="other-1" name="other" type="checkbox" value="1" onchange="toggleVisibility('slicedcheese')">
 					<label for="other-1">Sliced Cheese</label><br>
-					<input id="other-2" name="other" type="checkbox" value="2" onchange="toggleVisibility('mazzarellacheese')">
+					<input id="other-2" name="other" type="checkbox" value="2" onchange="toggleVisibility('mozzarellacheese')">
 					<label for="other-2">Mozzarella Cheese</label><br>
 					<input id="other-3" name="other" type="checkbox" value="3" onchange="toggleVisibility('egg')">
 					<label for="other-3">Egg</label><br>
-					<input id="other-4" name="other" type="checkbox" value="4" onchange="toggleVisibility('yorgurt')">
-					<label for="other-4">Yorgurt</label><br>
-					<input id="other-5" name="other" type="checkbox" value="5" onchange="toggleVisibility('nuts')">
-					<label for="other-5">Nuts</label><br>
-					<input id="other-6" name="other" type="checkbox" value="6" onchange="toggleVisibility('gronola')">
-					<label for="other-6">Gronola</label><br>
-					<input id="other-7" name="other" type="checkbox" value="7" onchange="toggleVisibility('cereal')">
-					<label for="other-7">Cereal</label><br>
+					<input id="other-4" name="other" type="checkbox" value="4" onchange="toggleVisibility('yogurt')">
+					<label for="other-4">yogurt</label><br>
 				</fieldset>
 			</form>
 			<button onclick="startpairing()"> Start Pairing! </button>
@@ -98,16 +84,26 @@
 			<img id="bagel"  src="assets/bagel.png"  style="display:none"/>
 			<img id="croissant"  src="assets/croissant.png"  style="display:none"/>
 			<img id="pancake"  src="assets/pancake.png"  style="display:none"/>
+			<img id="steamedbread"  src="assets/steamedbread.png"  style="display:none"/>
 			<img id="bacon"  src="assets/bacon.png"  style="display:none"/>
+			<img id="turkeybreast"  src="assets/turkeybreast.png"  style="display:none"/>
 			<img id="ham"  src="assets/ham.png"  style="display:none"/>
 			<img id="salmon"  src="assets/salmon.png"  style="display:none"/>
 			<img id="tuna"  src="assets/tuna.png"  style="display:none"/>
 			<img id="tomato"  src="assets/tomato.png"  style="display:none"/>
 			<img id="mushroom"  src="assets/mushroom.png"  style="display:none"/>
 			<img id="avocado"  src="assets/avocado.png"  style="display:none"/>
+			<img id="spinach"  src="assets/spinach.png"  style="display:none"/>
 			<img id="lettuce"  src="assets/lettuce.png"  style="display:none"/>
 			<img id="blueberry"  src="assets/blueberry.png"  style="display:none"/>
+			<img id="strawberry"  src="assets/strawberry.png"  style="display:none"/>
+			<img id="banana"  src="assets/banana.png"  style="display:none"/>
+			<img id="grape"  src="assets/grape.png"  style="display:none"/>
+			<img id="kiwi"  src="assets/kiwi.png"  style="display:none"/>
 			<img id="slicedcheese"  src="assets/slicedcheese.png"  style="display:none"/>
+			<img id="mozzarellacheese"  src="assets/mozzarellacheese.png"  style="display:none"/>
+			<img id="egg"  src="assets/egg.png"  style="display:none"/>
+			<img id="yogurt"  src="assets/yogurt.png"  style="display:none"/>
 		</section>
 	</body>
 </html>
