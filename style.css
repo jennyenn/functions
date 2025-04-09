@@ -5,11 +5,18 @@
     --font:  "Mulish", sans-serif;
 
     --base-size: 16px;
-    --gutter-size: calc(3*var(--base-size));
+    --gutter-size: calc(2*var(--base-size));
     --small-gutter-size: calc(1*var(--base-size));
 
     --color--background: #F7F2EC;
     --color--red: #ED531F;
+}
+
+@media (min-width:768px){
+	:root{
+		--base-size: 16px;
+		--gutter-size: calc(4*var(--base-size));
+	}
 }
 
 
@@ -41,7 +48,7 @@ body{
 
 h1{
     font-family: var(--font);
-    font-size: calc(3*var(--base-size));
+    font-size: calc(3.5*var(--base-size));
     color: var(--color--red);
     font-weight: 700;
 }
