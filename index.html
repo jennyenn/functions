@@ -9,9 +9,11 @@
 		<!-- <link rel="icon" href="assets/icon.png" type="image/png"> -->
 	</head>
 	<body>
-		<section>
+		<header>
 			<h1> What's for brunch?</h1>
 			<p> Pick your ingredients and discover personalized brunch ideas! </p>
+		</header>
+		<main class="main-1">
 			<form>
 				<fieldset>
 					<legend>Main Course :</legend>
@@ -79,36 +81,38 @@
 				<button type="reset"> Reset </button>
 			</form>
 			<button onclick="startpairing()"> Start Pairing! </button>
-		</section>
-		<section id="selected-images">
-			<img id="toast"  src="assets/toast.png"  style="display:none"/>
-			<img id="bagel"  src="assets/bagel.png"  style="display:none"/>
-			<img id="croissant"  src="assets/croissant.png"  style="display:none"/>
-			<img id="pancake"  src="assets/pancake.png"  style="display:none"/>
-			<img id="steamedbread"  src="assets/steamedbread.png"  style="display:none"/>
-			<img id="bacon"  src="assets/bacon.png"  style="display:none"/>
-			<img id="turkeybreast"  src="assets/turkeybreast.png"  style="display:none"/>
-			<img id="ham"  src="assets/ham.png"  style="display:none"/>
-			<img id="salmon"  src="assets/salmon.png"  style="display:none"/>
-			<img id="tuna"  src="assets/tuna.png"  style="display:none"/>
-			<img id="tomato"  src="assets/tomato.png"  style="display:none"/>
-			<img id="mushroom"  src="assets/mushroom.png"  style="display:none"/>
-			<img id="avocado"  src="assets/avocado.png"  style="display:none"/>
-			<img id="spinach"  src="assets/spinach.png"  style="display:none"/>
-			<img id="lettuce"  src="assets/lettuce.png"  style="display:none"/>
-			<img id="blueberry"  src="assets/blueberry.png"  style="display:none"/>
-			<img id="strawberry"  src="assets/strawberry.png"  style="display:none"/>
-			<img id="banana"  src="assets/banana.png"  style="display:none"/>
-			<img id="grape"  src="assets/grape.png"  style="display:none"/>
-			<img id="kiwi"  src="assets/kiwi.png"  style="display:none"/>
-			<img id="slicedcheese"  src="assets/slicedcheese.png"  style="display:none"/>
-			<img id="mozzarellacheese"  src="assets/mozzarellacheese.png"  style="display:none"/>
-			<img id="egg"  src="assets/egg.png"  style="display:none"/>
-			<img id="yogurt"  src="assets/yogurt.png"  style="display:none"/>
-		</section>
-		<section>
-			<p> <span id="main"></span> + <span id="meat"></span> + <span id="vegetable"></span> + <span id="fruit"></span> + <span id="toppings"></span> </p>
-			<p id="result"></p>
-		</section>
+		</main>
+		<main class="main-2">
+			<section id="selected-images">
+				<img id="toast"  src="assets/toast.png"  style="display:none"/>
+				<img id="bagel"  src="assets/bagel.png"  style="display:none"/>
+				<img id="croissant"  src="assets/croissant.png"  style="display:none"/>
+				<img id="pancake"  src="assets/pancake.png"  style="display:none"/>
+				<img id="steamedbread"  src="assets/steamedbread.png"  style="display:none"/>
+				<img id="bacon"  src="assets/bacon.png"  style="display:none"/>
+				<img id="turkeybreast"  src="assets/turkeybreast.png"  style="display:none"/>
+				<img id="ham"  src="assets/ham.png"  style="display:none"/>
+				<img id="salmon"  src="assets/salmon.png"  style="display:none"/>
+				<img id="tuna"  src="assets/tuna.png"  style="display:none"/>
+				<img id="tomato"  src="assets/tomato.png"  style="display:none"/>
+				<img id="mushroom"  src="assets/mushroom.png"  style="display:none"/>
+				<img id="avocado"  src="assets/avocado.png"  style="display:none"/>
+				<img id="spinach"  src="assets/spinach.png"  style="display:none"/>
+				<img id="lettuce"  src="assets/lettuce.png"  style="display:none"/>
+				<img id="blueberry"  src="assets/blueberry.png"  style="display:none"/>
+				<img id="strawberry"  src="assets/strawberry.png"  style="display:none"/>
+				<img id="banana"  src="assets/banana.png"  style="display:none"/>
+				<img id="grape"  src="assets/grape.png"  style="display:none"/>
+				<img id="kiwi"  src="assets/kiwi.png"  style="display:none"/>
+				<img id="slicedcheese"  src="assets/slicedcheese.png"  style="display:none"/>
+				<img id="mozzarellacheese"  src="assets/mozzarellacheese.png"  style="display:none"/>
+				<img id="egg"  src="assets/egg.png"  style="display:none"/>
+				<img id="yogurt"  src="assets/yogurt.png"  style="display:none"/>
+			</section>
+			<section>
+				<p> <span id="main">___</span> + <span id="meat">___</span> + <span id="vegetable">___</span> + <span id="fruit">___</span> + <span id="toppings">___</span> </p>
+				<p id="result"></p>
+			</section>
+		</main>
 	</body>
 </html>
