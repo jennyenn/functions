@@ -207,11 +207,11 @@ function toggleVisibility(id) {
             // add the selected item into the selected array
             // Why use "if": only if 'main' is found, then push 'main'
             // If I don't use "if": when users select a main course, but the meat array has nothing to push, it will cause an error.
-            if (main) {selectedMainArray.push(main);}
-            if (meat) {selectedMeatArray.push(meat);}
-            if (vegetable) {selectedVegetableArray.push(vegetable);}
-            if (fruit) {selectedFruitArray.push(fruit);}
-            if (toppings) {selectedToppingsArray.push(toppings);}
+            if (main) { selectedMainArray.push(main); }
+            if (meat) { selectedMeatArray.push(meat); }
+            if (vegetable) { selectedVegetableArray.push(vegetable); }
+            if (fruit) { selectedFruitArray.push(fruit); }
+            if (toppings) { selectedToppingsArray.push(toppings); }
             console.log(id);
       }
 }

@@ -1,6 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+
+    --font:  "Mulish", sans-serif;
+
+    --base-size: 16px;
+    --gutter-size: calc(3*var(--base-size));
+
+    --color--background: #F7F2EC;
+    --color--red: #ED531F;
+}
+
 body{
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 3fr;
+    background-color: var(--color--background);
+    margin: var(--gutter-size);
+    font-family: var(--font);
+    font-size: var(--base-size);
+}
+
+h1{
+    font-family: var(--font);
+    font-size: calc(3*var(--base-size));
+    color: var(--color--red);
+    font-weight: 700;
+}
+
+/* form style */
+fieldset{
+    background-color: white;
+}
+
+legend{
+    font-family: "Mulish", sans-serif;
+}
+
+input[type="checkbox"] {
+    width: 8px;
+    height: 8px;
+    outline: 1px solid black;
 }
 
 #selected-images {
