@@ -175,7 +175,6 @@ let selectedToppingsArray = [];
 //I wnat to show images when checkboxed are checked
 //I found this: https://jsfiddle.net/vaWtY/
 
-
 function toggleVisibility(id) {
 
     // array.find
@@ -202,15 +201,17 @@ function toggleVisibility(id) {
             selectedVegetableArray = selectedVegetableArray.filter(vegetable => vegetable.id !== id);
             selectedFruitArray = selectedFruitArray.filter(fruit => fruit.id !== id);
             selectedToppingsArray = selectedToppingsArray.filter(toppings => toppings.id !== id);
-           
       }
       else {
             img.style.display="block";
-            selectedMainArray.push(main);
-            selectedMeatArray.push(meat);
-            selectedVegetableArray.push(vegetable);
-            selectedFruitArray.push(fruit);
-            selectedToppingsArray.push(toppings);
+            // add the selected item into the selected array
+            // Why use "if": only if 'main' is found, then push 'main'
+            // If I don't use "if": when users select a main course, but the meat array has nothing to push, it will cause an error.
+            if (main) {selectedMainArray.push(main);}
+            if (meat) {selectedMeatArray.push(meat);}
+            if (vegetable) {selectedVegetableArray.push(vegetable);}
+            if (fruit) {selectedFruitArray.push(fruit);}
+            if (toppings) {selectedToppingsArray.push(toppings);}
             console.log(id);
       }
 }
@@ -228,6 +229,8 @@ function startpairing(){
         img.style.display = "none";
     });
 
+    let totalColories = 0;
+
     if (selectedMainArray.length > 0){
         //https://stackoverflow.com/questions/4550505/getting-a-random-value-from-a-javascript-array
         // get ramdom value from one array
@@ -239,28 +242,69 @@ function startpairing(){
         // display the randomly selected one!
         if (selectedMainimg) {
             selectedMainimg.style.display = "block";
-            console.log(selectedMain.name,selectedMain.calories)
+            console.log(selectedMain.name,selectedMain.calories);
+            totalColories += selectedMain.calories;
+            document.getElementById("main").innerHTML = `${selectedMain.name}`;
         }
-
-        console.log("selectedMainArray!");
     }
 
     if (selectedMeatArray.length > 0){
-        //https://stackoverflow.com/questions/4550505/getting-a-random-value-from-a-javascript-array
-        // get ramdom value from one array
+
         const randomMeat = Math.floor(Math.random() * selectedMeatArray.length);
-        // get the selectedMeat's id
         const selectedMeat = selectedMeatArray[randomMeat];
         const selectedMeatimg = document.getElementById(selectedMeat.id);
 
-        // display the randomly selected one!
         if (selectedMeatimg) {
             selectedMeatimg.style.display = "block";
             console.log(selectedMeat.name,selectedMeat.calories)
+            totalColories += selectedMeat.calories;
+            document.getElementById("meat").innerHTML = `${selectedMeat.name}`;
         }
-
-        console.log("selectedMeatArray!");
     }
 
+    if (selectedVegetableArray.length > 0){
+
+        const randomVegetable = Math.floor(Math.random() * selectedVegetableArray.length);
+        const selectedVegetable = selectedVegetableArray[randomVegetable];
+        const selectedVegetableimg = document.getElementById(selectedVegetable.id);
+
+        if (selectedVegetableimg) {
+            selectedVegetableimg.style.display = "block";
+            console.log(selectedVegetable.name,selectedVegetable.calories)
+            totalColories += selectedVegetable.calories;
+            document.getElementById("vegetable").innerHTML = `${selectedVegetable.name}`;
+        }
+    }
+
+    if (selectedFruitArray.length > 0){
+
+        const randomFruit = Math.floor(Math.random() * selectedFruitArray.length);
+        const selectedFruit = selectedFruitArray[randomFruit];
+        const selectedFruitimg = document.getElementById(selectedFruit.id);
+
+        if (selectedFruitimg) {
+            selectedFruitimg.style.display = "block";
+            console.log(selectedFruit.name,selectedFruit.calories)
+            totalColories += selectedFruit.calories;
+            document.getElementById("fruit").innerHTML = `${selectedFruit.name}`;
+        }
+    }
+
+    if (selectedToppingsArray.length > 0){
+
+        const randomToppings = Math.floor(Math.random() * selectedToppingsArray.length);
+        const selectedToppings = selectedToppingsArray[randomToppings];
+        const selectedToppingsimg = document.getElementById(selectedToppings.id);
+
+        if (selectedToppingsimg) {
+            selectedToppingsimg.style.display = "block";
+            console.log(selectedToppings.name,selectedToppings.calories)
+            totalColories += selectedToppings.calories;
+            document.getElementById("toppings").innerHTML = `${selectedToppings.name}`;
+        }
+    }
+
+    console.log(totalColories);
+    document.getElementById("result").innerHTML = `Total: ${totalColories} kcal`;
 }
 

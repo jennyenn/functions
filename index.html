@@ -9,9 +9,9 @@
 		<!-- <link rel="icon" href="assets/icon.png" type="image/png"> -->
 	</head>
 	<body>
-		<h1>Your Personalized Brunch Inspiration!</h1>
-		<p>Select the ingredients you have, and we'll help you create the perfect brunch combination.</p>
 		<section>
+			<h1> What's for brunch?</h1>
+			<p> Pick your ingredients and discover personalized brunch ideas! </p>
 			<form>
 				<fieldset>
 					<legend>Main Course :</legend>
@@ -76,6 +76,7 @@
 					<input id="other-4" name="other" type="checkbox" value="4" onchange="toggleVisibility('yogurt')">
 					<label for="other-4">yogurt</label><br>
 				</fieldset>
+				<button type="reset"> Reset </button>
 			</form>
 			<button onclick="startpairing()"> Start Pairing! </button>
 		</section>
@@ -104,6 +105,10 @@
 			<img id="mozzarellacheese"  src="assets/mozzarellacheese.png"  style="display:none"/>
 			<img id="egg"  src="assets/egg.png"  style="display:none"/>
 			<img id="yogurt"  src="assets/yogurt.png"  style="display:none"/>
+		</section>
+		<section>
+			<p> <span id="main"></span> + <span id="meat"></span> + <span id="vegetable"></span> + <span id="fruit"></span> + <span id="toppings"></span> </p>
+			<p id="result"></p>
 		</section>
 	</body>
 </html>
