@@ -17,21 +17,21 @@
 header{
     grid-area: header;
 }
-.main-1{
+#main1{
     grid-area: main1;
 }
-.main-2{
+#main2{
     grid-area: main2;
-    margin: var(--gutter-size);
 }
 
 body{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-columns: auto;
+    grid-template-rows:  0.2fr 1fr 1fr;
     grid-template-areas: 
-        "header header header header"
-        "main1 main2 main2 main2"
+        "header"
+        "main1"
+        "main2"
     ;
     background-color: var(--color--background);
     margin: var(--gutter-size);
@@ -49,7 +49,8 @@ h1{
 /* form style */
 
 form{
-    margin-block: var(--gutter-size);
+    margin-top: var(--small-gutter-size);
+    margin-bottom: var(--small-gutter-size);
     display: flex;
     flex-direction: column;
     gap: var(--small-gutter-size);
@@ -64,6 +65,7 @@ fieldset{
 legend{
     font-family: "Mulish", sans-serif;
     color: var(--color--red);
+    font-weight:600;
 }
 
 input[type="checkbox"] {
@@ -79,15 +81,15 @@ input:checked{
 
 #selected-images {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     align-items: center;
     gap: var(--small-gutter-size);
 }
 
 img {
-    width: 16vw;
-    height: 16vw;
+    width: 50vw;
+    height: 30vw;
     object-fit: contain;
 }
 
@@ -103,4 +105,35 @@ form button{
     background-color: transparent;
     color: var(--color--red);
     border: 1px solid var(--color--red);
+    margin-top: var(--gutter-size);
+}
+
+
+@media (min-width: 768px){
+
+    #main2{
+        margin: var(--gutter-size);
+    }
+    
+    body{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "header header header header"
+            "main1 main2 main2 main2"
+        ;
+    }
+
+    #selected-images {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    img {
+        width: 16vw;
+        height: 16vw;
+        object-fit: contain;
+    }
+
 }
