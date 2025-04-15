@@ -10,8 +10,9 @@
 	</head>
 	<body>
 		<header>
-			<h1> What's for brunch?</h1>
+			<img src="assets/header/header.png" id="headerImage">
 			<p> Pick your ingredients and discover personalized brunch ideas! </p>
+
 		</header>
 		<main id="main1">
 			<form>
@@ -80,7 +81,9 @@
 				</fieldset>
 				<button type="reset"> Reset </button>
 			</form>
-			<button onclick="startpairing()" id="pairing-button"><a href="#main2"> Start Pairing! </a> </button>
+			<!-- https://www.w3schools.com/jsref/event_onclick.asp -->
+			<!-- you can write onclick in html to start function-->
+			<button id="pairing-button"><a href="#main2"> Start Pairing! </a> </button>
 		</main>
 		<main id="main2">
 			<section id="selected-images">
@@ -109,7 +112,7 @@
 				<img id="egg"  src="assets/egg.png"  style="display:none"/>
 				<img id="yogurt"  src="assets/yogurt.png"  style="display:none"/>
 			</section>
-			<section>
+			<section id="result_section">
 				<p> <span id="main">___</span> + <span id="meat">___</span> + <span id="vegetable">___</span> + <span id="fruit">___</span> + <span id="toppings">___</span> </p>
 				<p id="result"></p>
 			</section>

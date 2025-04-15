@@ -8,8 +8,8 @@
     --gutter-size: calc(2*var(--base-size));
     --small-gutter-size: calc(1*var(--base-size));
 
-    --color--background: #F7F2EC;
-    --color--red: #ED531F;
+    --color--background: #FEFAF0;
+    --color--red: #DF6F62;
 }
 
 @media (min-width:768px){
@@ -19,8 +19,12 @@
 	}
 }
 
-
 /* grid review: https://css-tricks.com/snippets/css/complete-guide-grid/ */
+
+.headerImage{
+    width: 100vw;
+}
+
 header{
     grid-area: header;
 }
@@ -28,17 +32,19 @@ header{
     grid-area: main1;
 }
 #main2{
+    position: sticky;
+    top: var(--gutter-size);
     grid-area: main2;
 }
 
 body{
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows:  0.2fr 1fr 1fr;
+    grid-template-rows:  1fr 0.5fr 1fr;
     grid-template-areas: 
         "header"
-        "main1"
         "main2"
+        "main1"
     ;
     background-color: var(--color--background);
     margin: var(--gutter-size);
@@ -107,28 +113,45 @@ button{
     width: 100%;
     padding: var(--small-gutter-size);
     border-radius: var(--gutter-size);
+    position: sticky;
+    bottom: var(--gutter-size);
 }
 
 form button{
-    background-color: transparent;
+    background-color: white;
     color: var(--color--red);
     border: 1px solid var(--color--red);
     margin-top: var(--gutter-size);
+    position: sticky;
+    bottom: calc(2.8*var(--gutter-size));
 }
 
+#result_section{
+    display: none;
+}
+
+#result_section.showresult{
+    display:block;
+}
 
 @media (min-width: 768px){
 
+    #main1{
+        height: auto;
+
+    }
+
     #main2{
         margin: var(--gutter-size);
+        height: 100vh;
     }
     
     body{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: auto;
+        grid-template-rows: 0.1fr 1fr;
         grid-template-areas: 
-            "header header header header"
+            "header main2 main2 main2"
             "main1 main2 main2 main2"
         ;
     }
@@ -142,6 +165,17 @@ form button{
         width: 16vw;
         height: 16vw;
         object-fit: contain;
+    }
+
+
+    button{
+        position: relative;
+        bottom: auto;
+    }
+
+    form button{
+        position: relative;
+        bottom: auto;
     }
 
 }

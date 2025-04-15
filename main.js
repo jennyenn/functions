@@ -171,7 +171,6 @@ let ToppingsArray = [
 
 let selectedToppingsArray = [];
 
-
 //I wnat to show images when checkboxed are checked
 //I found this: https://jsfiddle.net/vaWtY/
 
@@ -216,13 +215,29 @@ function toggleVisibility(id) {
       }
 }
 
+
+let showresultClass = 'showresult'
+let textBlock = document.querySelector('#result_section')
+let pairingButton = document.querySelector('#pairing-button')
+
+pairingButton.onclick = () => {
+    startpairing();
+    textBlock.classList.toggle(showresultClass);
+}
+
 function startpairing(){
     console.log("clicked!");
 
-    // if (selectedMainArray.length === 0) {
-    //     alert("Please select at least one item first!");
-    //     return;
-    // }
+    // https://stackoverflow.com/questions/28543611/in-js-are-a-b-c-and-a-ba-cb-c-the-same-sorry-for-m
+    // a and b and c are both equal to 0 : use &&
+    if ((selectedMainArray.length === 0)&&
+        (selectedMeatArray.length === 0)&&
+        (selectedVegetableArray.length === 0)&&
+        (selectedFruitArray.length === 0)&&
+        (selectedToppingsArray.length === 0)) {
+        alert("Please select at least one item first!");
+        return;
+    }
 
     // hide all img first
     document.querySelectorAll("img").forEach(img => {
@@ -307,4 +322,3 @@ function startpairing(){
     console.log(totalColories);
     document.getElementById("result").innerHTML = `Total: ${totalColories} kcal`;
 }
-
