@@ -15,14 +15,15 @@
 @media (min-width:768px){
 	:root{
 		--base-size: 16px;
-		--gutter-size: calc(4*var(--base-size));
+		--gutter-size: calc(3*var(--base-size));
 	}
 }
 
 /* grid review: https://css-tricks.com/snippets/css/complete-guide-grid/ */
 
-.headerImage{
-    width: 100vw;
+#headerImage{
+    width: 90vw;
+    height: auto;
 }
 
 header{
@@ -33,8 +34,10 @@ header{
 }
 #main2{
     position: sticky;
-    top: var(--gutter-size);
     grid-area: main2;
+    height: 30vh;
+    background-color: var(--color--background);
+    overflow: scroll;
 }
 
 body{
