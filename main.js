@@ -327,16 +327,18 @@ function startpairing(){
 
 function resetAll(){
 
+    // hide all images
     document.querySelectorAll("img:not(#headerImage)").forEach(img => {
         img.style.display = "none";
     });
 
-    selectedMainArray = [];
-    selectedMeatArray = [];
-    selectedVegetableArray = [];
-    selectedFruitArray = [];
-    selectedToppingsArray = [];
+    // checkbox unchecked
+    // https://stackoverflow.com/questions/8206565/check-uncheck-checkbox-with-javascript
+    document.querySelectorAll("input").forEach(checkbox => {
+        checkbox.checked = false;
+    });
 
-    
-
+    // #result_section display none
+    // https://bito.ai/resources/display-none-in-javascript-javascript-explained/
+    document.getElementById("result_section").style.display = "none";
 }
