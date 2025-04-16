@@ -215,6 +215,14 @@ function toggleVisibility(id) {
       }
 }
 
+let expandClass = 'expanded'
+let main2 = document.querySelector('#main2')
+let expandButton = document.querySelector('#expand-main2')
+
+expandButton.onclick = () => {
+    main2.classList.toggle(expandClass);
+    document.getElementById("expand-main2").innerHTML = `▲`;
+}
 
 let showresultClass = 'showresult'
 let textBlock = document.querySelector('#result_section')
@@ -223,6 +231,8 @@ let pairingButton = document.querySelector('#pairing-button')
 pairingButton.onclick = () => {
     startpairing();
     textBlock.classList.toggle(showresultClass);
+    main2.classList.toggle(expandClass);
+    document.getElementById("expand-main2").innerHTML = `▲`;
 }
 
 function startpairing(){
@@ -346,11 +356,3 @@ function resetAll(){
     document.getElementById("result_section").style.display = "none";
 }
 
-let expandClass = 'expanded'
-let main2 = document.querySelector('#main2')
-let expandButton = document.querySelector('#expand-main2')
-
-expandButton.onclick = () => {
-    main2.classList.toggle(expandClass);
-    document.getElementById("expand-main2").innerHTML = `▲`;
-}
