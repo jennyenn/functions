@@ -75,10 +75,11 @@ header{
     overflow: scroll;
     border-radius: 20px;
     padding: var(--gutter-size);
+    z-index: 2;
 }
 
 #main2.expanded{
-    height: 95vh;
+    height: 97vh;
 }
 
 body{
@@ -111,7 +112,7 @@ form{
 
 fieldset{
     background-color: rgba(255, 255, 255, 0.57);
-    border: 0.9px solid var(--color--red);
+    border: 1px solid var(--color--red);
     padding: var(--small-gutter-size);
     border-radius: var(--base-size);
 }
@@ -231,6 +232,7 @@ img {
         margin: var(--small-gutter-size);
         margin-left: var(--gutter-size);
         height: 100vh;
+        z-index: 1;
     }
     
     body{
