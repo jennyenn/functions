@@ -84,7 +84,7 @@ header{
 body{
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows:  0.7fr 0.2fr 0.7fr;
+    grid-template-rows:  0.7fr 0.23fr 0.7fr;
     grid-template-areas: 
         "header"
         "main2"
@@ -111,7 +111,7 @@ form{
 
 fieldset{
     background-color: rgba(255, 255, 255, 0.57);
-    border: 0.8px solid var(--color--red);
+    border: 0.9px solid var(--color--red);
     padding: var(--small-gutter-size);
     border-radius: var(--base-size);
 }
@@ -163,9 +163,9 @@ img {
     width: 100%;
     padding: var(--small-gutter-size);
     border-radius: calc(2*var(--gutter-size));
-    position: sticky;
-    bottom: calc(3.6*var(--gutter-size));
-    margin-top: var(--small-gutter-size);
+    /* position: sticky;
+    bottom: calc(3.6*var(--gutter-size)); */
+    /* margin-top: var(--small-gutter-size); */
     text-align: center;
 }
 
@@ -175,9 +175,9 @@ img {
     width: 100%;
     padding: var(--small-gutter-size);
     border: 1px solid var(--color--red);
-    margin-top: var(--gutter-size);
-    position: sticky;
-    bottom: var(--gutter-size);
+    /* margin-top: var(--gutter-size); */
+    /* position: sticky;
+    bottom: var(--gutter-size); */
     border-radius: calc(2*var(--gutter-size));
     text-align: center;
 }
@@ -192,6 +192,17 @@ img {
 #result_section.showresult{
     display:block;
 }
+
+#formbutton{
+    display: flex;
+    position: sticky;
+    bottom: var(--small-gutter-size);
+    z-index: 2;
+    gap: calc(0.3*var(--small-gutter-size));
+}
+
+
+
 
 @media (min-width: 768px){
 
