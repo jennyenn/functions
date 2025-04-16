@@ -240,7 +240,9 @@ function startpairing(){
     }
 
     // hide all img first
-    document.querySelectorAll("img").forEach(img => {
+    // except for the header image
+    // https://stackoverflow.com/questions/36500146/get-all-elements-of-the-document-except-the-one-with-the-id-main-nav/36500190
+    document.querySelectorAll("img:not(#headerImage)").forEach(img => {
         img.style.display = "none";
     });
 

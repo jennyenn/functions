@@ -52,7 +52,8 @@ header{
     position: sticky;
     top: var(--gutter-size);
     grid-area: main2;
-    background-color: white;
+    background-color: var(--color--background);
+    border: 1px solid var(--color--red);
     overflow: scroll;
     border-radius: 20px;
 }
@@ -166,18 +167,20 @@ form button{
 
     header{
         height: auto;
+        text-align: left;
     }
 
     #main1{
         height: auto;
         overflow: scroll;
+        margin-top: var(--small-gutter-size);
     }
 
     #main2{
         position: sticky;
         top: 0;
         margin: var(--small-gutter-size);
-        margin-inline: var(--gutter-size);
+        margin-left: var(--gutter-size);
         height: 100vh;
     }
     
@@ -204,17 +207,18 @@ form button{
 
 
     button{
-        position: relative;
-        bottom: auto;
-    }
-
-    form{
-        margin-top: calc(0.1*var(--small-gutter-size));
+        position: fixed;
+        right: var(--gutter-size);
+        bottom: var(--gutter-size);
+        width: 400px;
+        z-index: 2;
     }
 
     form button{
-        position: relative;
-        bottom: auto;
+        position: fixed;
+        right: calc(9.5*var(--gutter-size));
+        bottom: var(--gutter-size);
+        width: 200px;
     }
 
 }
