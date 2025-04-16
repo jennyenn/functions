@@ -103,16 +103,14 @@ legend{
 }
 
 input[type="checkbox"] {
+    appearance: auto;
     width: 14px;
     height: 14px;
-    outline: 1px solid var(--color--darkgreen);
+    /* outline: 1px solid var(--color--darkgreen); */
     border-radius: 1px;
     margin-inline: calc(1*var(--small-gutter-size));
 }
 
-input:checked{
-    background-color: var(--color--red);
-}
 
 #selected-images {
     display: grid;
