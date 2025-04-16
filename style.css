@@ -21,18 +21,33 @@
 
 /* grid review: https://css-tricks.com/snippets/css/complete-guide-grid/ */
 
+#headerToast{
+    scale: 1.5;
+    filter: opacity(0.5);
+    transform: rotate(-30deg) translateX(-20vw) translateY(5vh);
+}
+
+#headerBacon{
+    scale: 1.8;
+    filter: opacity(0.5);
+    transform: rotate(15deg) translateX(20vw) translateY(15vh);
+}
+
 #headerImage{
-    width: 90vw;
+    width: 80vw;
     height: auto;
 }
 
 header{
     grid-area: header;
     height: 100vh;
+    text-align: center;
 }
+
 #main1{
     grid-area: main1;
 }
+
 #main2{
     position: sticky;
     top: 0;
@@ -141,6 +156,10 @@ form button{
 }
 
 @media (min-width: 768px){
+
+    #headerToast, #headerBacon{
+        display: none;
+    }
 
     #headerImage{
         margin-top: calc(-2*var(--small-gutter-size));
