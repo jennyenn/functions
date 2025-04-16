@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
 
-    --font:  "Mulish", sans-serif;
+    --font: "Poppins", sans-serif;
 
     --base-size: 16px;
     --gutter-size: calc(2*var(--base-size));
@@ -61,7 +61,7 @@ header{
 body{
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows:  0.5fr 0.3fr 1fr;
+    grid-template-rows:  0.7fr 0.3fr 0.3fr;
     grid-template-areas: 
         "header"
         "main2"
@@ -71,13 +71,7 @@ body{
     margin: var(--gutter-size);
     font-family: var(--font);
     font-size: var(--base-size);
-}
-
-h1{
-    font-family: var(--font);
-    font-size: calc(3.5*var(--base-size));
-    color: var(--color--red);
-    font-weight: 700;
+    font-weight: 300;
 }
 
 /* form style */
@@ -97,9 +91,10 @@ fieldset{
 }
 
 legend{
-    font-family: "Mulish", sans-serif;
+    font-family: var(--font);
     color: var(--color--red);
-    font-weight:600;
+    font-weight:500;
+    font-size: calc(1.5*var(--base-size));
 }
 
 input[type="checkbox"] {
@@ -147,7 +142,7 @@ img {
     border: 1px solid var(--color--red);
     margin-top: var(--gutter-size);
     position: sticky;
-    bottom: calc(2.8*var(--gutter-size));
+    bottom: calc(3*var(--gutter-size));
     border-radius: var(--gutter-size);
 }
 
