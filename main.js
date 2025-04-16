@@ -354,5 +354,8 @@ function resetAll(){
     // #result_section display none
     // https://bito.ai/resources/display-none-in-javascript-javascript-explained/
     document.getElementById("result_section").style.display = "none";
+
+    main2.classList.toggle(expandClass);
+    document.getElementById("expand-main2").innerHTML = `▼`;
 }
 
