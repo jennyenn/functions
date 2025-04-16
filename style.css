@@ -5,7 +5,7 @@
     --font: "Poppins", sans-serif;
 
     --base-size: 16px;
-    --gutter-size: calc(2*var(--base-size));
+    --gutter-size: calc(1.5*var(--base-size));
     --small-gutter-size: calc(1*var(--base-size));
 
     --color--background: #FEFAF0;
@@ -20,24 +20,32 @@
 	}
 }
 
+#headerImage{
+    width: 80vw;
+    height: auto;
+}
+
 /* grid review: https://css-tricks.com/snippets/css/complete-guide-grid/ */
 
 #headerToast{
     scale: 1.5;
     filter: opacity(0.5);
     transform: rotate(-30deg) translateX(-20vw) translateY(5vh);
+    z-index: 0;
+    position: relative;
 }
 
 #headerBacon{
     scale: 1.8;
     filter: opacity(0.5);
     transform: rotate(15deg) translateX(20vw) translateY(15vh);
+    z-index: 0;
+    position: relative;
 }
 
-#headerImage{
-    width: 80vw;
-    height: auto;
-}
+/* #mobileimage {
+    overflow-x: hidden;
+} */
 
 header{
     grid-area: header;
@@ -58,6 +66,7 @@ header{
     border: 1px solid var(--color--red);
     overflow: scroll;
     border-radius: 20px;
+    padding: var(--gutter-size);
 }
 
 body{
@@ -104,9 +113,8 @@ legend{
 
 input[type="checkbox"] {
     appearance: auto;
-    width: 14px;
-    height: 14px;
-    /* outline: 1px solid var(--color--darkgreen); */
+    width: 16px;
+    height: 16px;
     border-radius: 1px;
     margin-inline: calc(1*var(--small-gutter-size));
 }
@@ -131,8 +139,10 @@ img {
     color: white;
     width: 100%;
     padding: var(--small-gutter-size);
-    border-radius: var(--gutter-size);
-    z-index: 2;
+    border-radius: calc(2*var(--gutter-size));
+    position: sticky;
+    margin-top: var(--gutter-size);
+    z-index: 10;
 }
 
 #pairing-button{
@@ -140,10 +150,11 @@ img {
     color: white;
     width: 100%;
     padding: var(--small-gutter-size);
-    border-radius: var(--gutter-size);
+    border-radius: calc(2*var(--gutter-size));
     position: sticky;
-    bottom: var(--gutter-size);
+    bottom: calc(3.6*var(--gutter-size));
     margin-top: var(--small-gutter-size);
+    text-align: center;
 }
 
 #reset-button{
@@ -154,12 +165,16 @@ img {
     border: 1px solid var(--color--red);
     margin-top: var(--gutter-size);
     position: sticky;
-    bottom: calc(3*var(--gutter-size));
-    border-radius: var(--gutter-size);
+    bottom: var(--gutter-size);
+    border-radius: calc(2*var(--gutter-size));
+    text-align: center;
 }
 
 #result_section{
     display: none;
+    text-align: center;
+    font-size: calc(2*var(--base-size));
+    font-weight: 500;
 }
 
 #result_section.showresult{
