@@ -50,7 +50,7 @@ header{
 
 #main2{
     position: sticky;
-    top: var(--gutter-size);
+    top: var(--small-gutter-size);
     grid-area: main2;
     background-color: var(--color--background);
     border: 1px solid var(--color--red);
@@ -61,7 +61,7 @@ header{
 body{
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows:  0.5fr 0.4fr 1fr;
+    grid-template-rows:  0.5fr 0.3fr 1fr;
     grid-template-areas: 
         "header"
         "main2"
@@ -128,7 +128,7 @@ img {
     object-fit: contain;
 }
 
-button{
+#pairing-button{
     background-color: var(--color--red);
     color: white;
     width: 100%;
@@ -136,15 +136,19 @@ button{
     border-radius: var(--gutter-size);
     position: sticky;
     bottom: var(--gutter-size);
+    margin-top: var(--small-gutter-size);
 }
 
-form button{
-    background-color: white;
+#reset-button{
+    background-color: var(--color--background);
     color: var(--color--red);
+    width: 100%;
+    padding: var(--small-gutter-size);
     border: 1px solid var(--color--red);
     margin-top: var(--gutter-size);
     position: sticky;
     bottom: calc(2.8*var(--gutter-size));
+    border-radius: var(--gutter-size);
 }
 
 #result_section{
@@ -206,7 +210,7 @@ form button{
     }
 
 
-    button{
+    #pairing-button{
         position: fixed;
         right: var(--gutter-size);
         bottom: var(--gutter-size);
@@ -214,11 +218,12 @@ form button{
         z-index: 2;
     }
 
-    form button{
+    #reset-button{
         position: fixed;
         right: calc(9.5*var(--gutter-size));
         bottom: var(--gutter-size);
         width: 200px;
+        z-index: 2;
     }
 
 }

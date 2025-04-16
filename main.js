@@ -324,3 +324,19 @@ function startpairing(){
     console.log(totalColories);
     document.getElementById("result").innerHTML = `Total: ${totalColories} kcal`;
 }
+
+function resetAll(){
+
+    document.querySelectorAll("img:not(#headerImage)").forEach(img => {
+        img.style.display = "none";
+    });
+
+    selectedMainArray = [];
+    selectedMeatArray = [];
+    selectedVegetableArray = [];
+    selectedFruitArray = [];
+    selectedToppingsArray = [];
+
+    
+
+}
