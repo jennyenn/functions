@@ -73,6 +73,10 @@ header{
     padding: var(--gutter-size);
 }
 
+#main2.expanded{
+    height: 80vh;
+}
+
 body{
     display: grid;
     grid-template-columns: auto;
@@ -255,6 +259,10 @@ img {
         width: 200px;
         z-index: 2;
         text-align: center;
+    }
+
+    #expand-main2{
+        display: none;
     }
 
 }

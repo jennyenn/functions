@@ -331,7 +331,6 @@ function startpairing(){
 function resetAll(){
 
     // hide all images
-
     document.querySelectorAll("img:not(#headerImage):not(#headerToast):not(#headerBacon)").forEach(img => {
         img.style.display = "none";
     });
@@ -345,4 +344,13 @@ function resetAll(){
     // #result_section display none
     // https://bito.ai/resources/display-none-in-javascript-javascript-explained/
     document.getElementById("result_section").style.display = "none";
+}
+
+let expandClass = 'expanded'
+let main2 = document.querySelector('#main2')
+let expandButton = document.querySelector('#expand-main2')
+
+expandButton.onclick = () => {
+    main2.classList.toggle(expandClass);
+    document.getElementById("expand-main2").innerHTML = `▲`;
 }
