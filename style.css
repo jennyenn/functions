@@ -25,6 +25,10 @@
     height: auto;
 }
 
+header p{
+    size: calc(1.5*var(--base-size));
+}
+
 /* grid review: https://css-tricks.com/snippets/css/complete-guide-grid/ */
 
 #headerToast{
@@ -188,7 +192,7 @@ img {
     }
 
     #headerImage{
-        margin-top: calc(-2*var(--small-gutter-size));
+        margin-top: calc(-1*var(--small-gutter-size));
     }
 
     header{
