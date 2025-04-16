@@ -282,4 +282,8 @@ img {
         display: none;
     }
 
+    #mobileimage{
+        display: none;
+    }
+
 }
