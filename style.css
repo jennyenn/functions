@@ -10,6 +10,7 @@
 
     --color--background: #FEFAF0;
     --color--red: #DF6F62;
+    --color--darkgreen: #2F582C;
 }
 
 @media (min-width:768px){
@@ -46,6 +47,7 @@ header{
 
 #main1{
     grid-area: main1;
+    margin-top: calc(1.5*var(--gutter-size));
 }
 
 #main2{
@@ -61,7 +63,7 @@ header{
 body{
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows:  0.7fr 0.3fr 0.3fr;
+    grid-template-rows:  0.7fr 0.2fr 0.7fr;
     grid-template-areas: 
         "header"
         "main2"
@@ -72,6 +74,8 @@ body{
     font-family: var(--font);
     font-size: var(--base-size);
     font-weight: 300;
+    margin-top: var(--small-gutter-size);
+    color: var(--color--darkgreen);
 }
 
 /* form style */
@@ -85,7 +89,8 @@ form{
 }
 
 fieldset{
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.57);
+    border: 0.5px solid var(--color--red);
     padding: var(--small-gutter-size);
     border-radius: var(--base-size);
 }
@@ -98,11 +103,11 @@ legend{
 }
 
 input[type="checkbox"] {
-    width: 12px;
-    height: 12px;
-    outline: 1px solid black;
-    border-radius: 2px;
-    margin-right: calc(0.5*var(--small-gutter-size));
+    width: 14px;
+    height: 14px;
+    outline: 1px solid var(--color--darkgreen);
+    border-radius: 1px;
+    margin-inline: calc(1*var(--small-gutter-size));
 }
 
 input:checked{
@@ -121,6 +126,15 @@ img {
     width: 30vw;
     height: 30vw;
     object-fit: contain;
+}
+
+#start-button{
+    background-color: var(--color--red);
+    color: white;
+    width: 100%;
+    padding: var(--small-gutter-size);
+    border-radius: var(--gutter-size);
+    z-index: 2;
 }
 
 #pairing-button{
@@ -204,6 +218,9 @@ img {
         object-fit: contain;
     }
 
+    #start-button{
+        display: none;
+    }
 
     #pairing-button{
         position: fixed;
@@ -211,6 +228,7 @@ img {
         bottom: var(--gutter-size);
         width: 400px;
         z-index: 2;
+        text-align: center;
     }
 
     #reset-button{
@@ -219,6 +237,7 @@ img {
         bottom: var(--gutter-size);
         width: 200px;
         z-index: 2;
+        text-align: center;
     }
 
 }

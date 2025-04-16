@@ -239,6 +239,8 @@ function startpairing(){
         return;
     }
 
+    document.getElementById("result_section").style.display = "block";
+
     // hide all img first
     // except for the header image
     // https://stackoverflow.com/questions/36500146/get-all-elements-of-the-document-except-the-one-with-the-id-main-nav/36500190
