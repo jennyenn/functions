@@ -50,9 +50,8 @@ header{
 
 #main2{
     position: sticky;
-    top: 0;
+    top: var(--gutter-size);
     grid-area: main2;
-    /* height: 30vh; */
     background-color: white;
     overflow: scroll;
     border-radius: 20px;
@@ -61,7 +60,7 @@ header{
 body{
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows:  0.5fr 0.5fr 0.5fr;
+    grid-template-rows:  0.5fr 0.4fr 1fr;
     grid-template-areas: 
         "header"
         "main2"
