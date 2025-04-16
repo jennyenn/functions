@@ -28,22 +28,25 @@
 
 header{
     grid-area: header;
+    height: 100vh;
 }
 #main1{
     grid-area: main1;
 }
 #main2{
     position: sticky;
+    top: 0;
     grid-area: main2;
-    height: 30vh;
-    background-color: var(--color--background);
+    /* height: 30vh; */
+    background-color: white;
     overflow: scroll;
+    border-radius: 20px;
 }
 
 body{
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows:  1fr 0.5fr 1fr;
+    grid-template-rows:  0.5fr 0.5fr 0.5fr;
     grid-template-areas: 
         "header"
         "main2"
@@ -98,14 +101,14 @@ input:checked{
 
 #selected-images {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     align-items: center;
     gap: var(--small-gutter-size);
 }
 
 img {
-    width: 50vw;
+    width: 30vw;
     height: 30vw;
     object-fit: contain;
 }
@@ -139,20 +142,31 @@ form button{
 
 @media (min-width: 768px){
 
+    #headerImage{
+        margin-top: calc(-2*var(--small-gutter-size));
+    }
+
+    header{
+        height: auto;
+    }
+
     #main1{
         height: auto;
-
+        overflow: scroll;
     }
 
     #main2{
-        margin: var(--gutter-size);
+        position: sticky;
+        top: 0;
+        margin: var(--small-gutter-size);
+        margin-inline: var(--gutter-size);
         height: 100vh;
     }
     
     body{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 0.1fr 1fr;
+        grid-template-rows: 0.2fr 1fr;
         grid-template-areas: 
             "header main2 main2 main2"
             "main1 main2 main2 main2"
@@ -174,6 +188,10 @@ form button{
     button{
         position: relative;
         bottom: auto;
+    }
+
+    form{
+        margin-top: calc(0.1*var(--small-gutter-size));
     }
 
     form button{
