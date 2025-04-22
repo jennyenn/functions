@@ -18,7 +18,6 @@
     --color-fruit: #0F6BB3;
     --color-toppings: #ECB943;
 
-
     --img-size: 18vw;
 }
 
@@ -26,6 +25,7 @@
 	:root{
 		--base-size: 16px;
 		--gutter-size: calc(3*var(--base-size));
+        --img-size: 16vw;
 	}
 }
 
@@ -36,6 +36,7 @@
 
 header p{
     size: calc(1.5*var(--base-size));
+    text-align: center;
 }
 
 /* grid review: https://css-tricks.com/snippets/css/complete-guide-grid/ */
@@ -99,6 +100,7 @@ header, #main1{
 #main1{
     grid-area: main1;
     margin-top: calc(1.5*var(--gutter-size));
+    z-index: 0;
 }
 
 #main2-frame{
@@ -118,8 +120,7 @@ header, #main1{
     overflow: scroll;
     border-radius: 20px;
     padding: var(--small-gutter-size);
-    z-index: 2;
-    /* margin: calc(-1*var(--small-gutter-size)); */
+    z-index: 5;
     height: 100%;
 }
 
@@ -299,6 +300,13 @@ img {
         text-align: left;
     }
 
+    header p{
+        text-align: left;
+        margin-top: calc((-1*var(--small-gutter-size)));
+        margin-bottom: calc((1*var(--small-gutter-size)));
+        margin-left: calc((1*var(--small-gutter-size)));
+    }
+
     #main1{
         height: auto;
         margin-top: var(--small-gutter-size);
@@ -311,7 +319,6 @@ img {
         margin-right: var(--small-gutter-size);
         margin-left: var(--gutter-size);
         max-height: 95vh;
-        z-index: 1;
         padding: var(--gutter-size);
     }
 
@@ -346,14 +353,14 @@ img {
     }
 
     img {
-        width: 16vw;
-        height: 16vw;
+        width: var(--img-size);
+        height: var(--img-size);
         object-fit: contain;
     }
 
     #main2.expanded img{
-        width: 16vw;
-        height: 16vw;
+        width: var(--img-size);
+        height: var(--img-size);
     }
 
     #start-button{
