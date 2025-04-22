@@ -165,17 +165,24 @@ fieldset{
     border-radius: var(--base-size);
 }
 
+fieldset div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+
 legend{
     font-family: var(--font);
     color: var(--color--red);
     font-weight:500;
-    font-size: calc(1.5*var(--base-size));
+    font-size: calc(1.6*var(--base-size));
 }
 
 input[type="checkbox"] {
     appearance: auto;
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     border-radius: 1px;
     margin-inline: calc(1*var(--small-gutter-size));
 }
@@ -310,6 +317,7 @@ img {
     #main1{
         height: auto;
         margin-top: var(--small-gutter-size);
+        z-index: 1;
     }
 
 
