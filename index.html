@@ -140,12 +140,19 @@
 				<button id="pairing-button"><a href="#main2"> Start Pairing! </a> </button>	
 			</div>
 		</section>
-
+		<!-- main2-frame is the container of main2 for giving background color so that it is not overlapping with options on mobile-->
 		<div id="main2-frame">
 			<section id="main2">
 				<section id="main2-header">
 					<button id="expand-main2"> ► </button>
 					<p>Your selected ingredients</p>
+				</section>
+				<section id="result_section">
+					<div id="result_calories">
+						<img src="assets/total.png" id="total">
+						<p id="result"></p>
+					</div>
+					<p> <span id="main">___</span> + <span id="meat">___</span> + <span id="vegetable">___</span> + <span id="fruit">___</span> + <span id="toppings">___</span> </p>
 				</section>
 				<section id="selected-images" class="displayflex">
 					<img id="toast"  src="assets/toast.png"  style="display:none"/>
@@ -173,12 +180,7 @@
 					<img id="egg"  src="assets/egg.png"  style="display:none"/>
 					<img id="yogurt"  src="assets/yogurt.png"  style="display:none"/>
 				</section>
-				<section id="result_section">
-					<p> <span id="main">___</span> + <span id="meat">___</span> + <span id="vegetable">___</span> + <span id="fruit">___</span> + <span id="toppings">___</span> </p>
-					<p id="result"></p>
-				</section>
 			</section>
 		</div>
-			
 	</body>
 </html>

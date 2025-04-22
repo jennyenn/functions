@@ -25,7 +25,7 @@
 	:root{
 		--base-size: 16px;
 		--gutter-size: calc(3*var(--base-size));
-        --img-size: 16vw;
+        --img-size: 14vw;
 	}
 }
 
@@ -89,7 +89,6 @@ body{
     font-family: var(--font);
     font-size: var(--base-size);
     font-weight: 300;
-    /* margin-top: var(--small-gutter-size); */
     color: var(--color--darkgreen);
 }
 
@@ -146,6 +145,7 @@ header, #main1{
 #main2.expanded #selected-images {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    height: 60vh;
 }
 
 /* form style */
@@ -191,9 +191,8 @@ input[type="checkbox"] {
 #selected-images {
     display: flex;
     justify-items: center;
-    align-items: center;
     gap: var(--small-gutter-size);
-    margin-top: var(--small-gutter-size);
+    margin-top: var(--small-gutter-size);   
 }
 
 img {
@@ -224,6 +223,7 @@ img {
     bottom: calc(3.6*var(--gutter-size)); */
     /* margin-top: var(--small-gutter-size); */
     text-align: center;
+    font-weight: 400;
 }
 
 #reset-button{
@@ -282,9 +282,19 @@ img {
 }
 
 #result{
-    border: 1px solid var(--color--red);
-    border-radius: 20px;
-    font-size: calc(2*var(--base-size));
+    font-size: calc(1.5*var(--base-size));
+    color: var(--color--red);
+    border: 1.5px solid var(--color--red);
+    border-radius: calc(2*var(--gutter-size));
+    padding-block:  calc(0.5*var(--small-gutter-size));
+    padding-inline:var(--gutter-size);
+}
+
+#result_calories{
+    display: flex;
+    align-items: center;
+    gap: calc(-3*var(--gutter-size));
+    margin: auto;
 }
 
 
@@ -358,6 +368,7 @@ img {
     #main2.expanded #selected-images {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        height: 50vh;
     }
 
     img {
@@ -375,6 +386,14 @@ img {
         display: none;
     }
 
+    #pairing-button{
+        font-size: calc(1.2*var(--base-size));
+    }
+
+    #reset-button{
+        font-size: calc(1.2*var(--base-size));
+    }
+
     /* #pairing-button{
         position: fixed;
         right: var(--gutter-size);
@@ -382,6 +401,7 @@ img {
         width: 400px;
         z-index: 2;
         text-align: center;
+       
     }
 
     #reset-button{
@@ -399,6 +419,13 @@ img {
 
     #mobileimage{
         display: none;
+    }
+
+    #result{
+        font-size: calc(2*var(--base-size));
+        border-radius: var(--gutter-size);
+        padding-block: calc(0.5*var(--small-gutter-size));
+        padding-inline:calc(0.8*var(--gutter-size));
     }
 
 }

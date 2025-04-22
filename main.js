@@ -258,7 +258,7 @@ function startpairing(){
     // except for the header image
     // https://stackoverflow.com/questions/36500146/get-all-elements-of-the-document-except-the-one-with-the-id-main-nav/36500190
     // https://forum.freecodecamp.org/t/multiple-selectors-to-exclude-in-queryselectorall/225462
-    document.querySelectorAll("img:not(#headerImage):not(#headerToast):not(#headerBacon)").forEach(img => {
+    document.querySelectorAll("img:not(#headerImage):not(#headerToast):not(#headerBacon):not(#total)").forEach(img => {
         img.style.display = "none";
     });
 
@@ -338,7 +338,7 @@ function startpairing(){
     }
 
     console.log(totalColories);
-    document.getElementById("result").innerHTML = `Total: ${totalColories} kcal`;
+    document.getElementById("result").innerHTML = `${totalColories} kcal`;
 }
 
 function resetAll(){
