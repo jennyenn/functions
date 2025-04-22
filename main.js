@@ -229,17 +229,10 @@ let textBlock = document.querySelector('#result_section')
 let pairingButton = document.querySelector('#pairing-button')
 
 pairingButton.onclick = () => {
-    startpairing();
-    textBlock.classList.toggle(showresultClass);
-    main2.classList.toggle(expandClass);
-    document.getElementById("expand-main2").innerHTML = `▲`;
-}
-
-function startpairing(){
-    console.log("clicked!");
 
     // https://stackoverflow.com/questions/28543611/in-js-are-a-b-c-and-a-ba-cb-c-the-same-sorry-for-m
     // a and b and c are both equal to 0 : use &&
+    // I moved this from function startpairing to here, so it won't show result and expandClass if nothing is selected
     if ((selectedMainArray.length === 0)&&
         (selectedMeatArray.length === 0)&&
         (selectedVegetableArray.length === 0)&&
@@ -248,6 +241,15 @@ function startpairing(){
         alert("Please select at least one item first!");
         return;
     }
+   
+    startpairing();
+    textBlock.classList.add(showresultClass);
+    main2.classList.add(expandClass);
+    document.getElementById("expand-main2").innerHTML = `▲`;
+}
+
+function startpairing(){
+    console.log("clicked!");
 
     document.getElementById("result_section").style.display = "block";
 
@@ -269,7 +271,7 @@ function startpairing(){
         const selectedMain = selectedMainArray[randomMain];
         const selectedMainimg = document.getElementById(selectedMain.id);
 
-        // display the randomly selected one!
+        // display the random selected one!
         if (selectedMainimg) {
             selectedMainimg.style.display = "block";
             console.log(selectedMain.name,selectedMain.calories);
@@ -355,7 +357,7 @@ function resetAll(){
     // https://bito.ai/resources/display-none-in-javascript-javascript-explained/
     document.getElementById("result_section").style.display = "none";
 
-    main2.classList.toggle(expandClass);
+    main2.classList.remove(expandClass);
     document.getElementById("expand-main2").innerHTML = `▼`;
 }
 

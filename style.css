@@ -104,6 +104,7 @@ header{
 
 #main2.expanded{
     height: 97vh;
+    z-index: 5;
 }
 
 body{
