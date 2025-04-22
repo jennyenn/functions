@@ -148,6 +148,7 @@ img {
 }
 
 #start-button{
+    display: block;
     background-color: var(--color--red);
     color: white;
     width: 100%;
