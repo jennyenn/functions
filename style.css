@@ -194,12 +194,9 @@ img {
 #reset-button{
     background-color: var(--color--background);
     color: var(--color--red);
-    width: 100%;
+    width: 50%;
     padding: var(--small-gutter-size);
     border: 1px solid var(--color--red);
-    /* margin-top: var(--gutter-size); */
-    /* position: sticky;
-    bottom: var(--gutter-size); */
     border-radius: calc(2*var(--gutter-size));
     text-align: center;
 }
