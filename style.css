@@ -12,7 +12,7 @@
     --color--red: #DF6F62;
     --color--darkgreen: #2F582C;
 
-    --img-size: 20vw;
+    --img-size: 18vw;
 }
 
 @media (min-width:768px){
@@ -73,17 +73,26 @@ header{
     margin-top: calc(1.5*var(--gutter-size));
 }
 
-#main2{
+#main2-frame{
     position: sticky;
-    top: var(--small-gutter-size);
+    top: 0px;
     grid-area: main2;
+    width: 100%;
+    height: 100%;
+    padding: var(--small-gutter-size);
+    background-color: var(--color--background);
+    margin: 0px;
+}
+
+#main2{
     background-color: var(--color--background);
     border: 1px solid var(--color--red);
     overflow: scroll;
     border-radius: 20px;
-    padding: var(--gutter-size);
+    padding: var(--small-gutter-size);
     z-index: 2;
-    margin: calc(-1*var(--small-gutter-size));
+    /* margin: calc(-1*var(--small-gutter-size)); */
+    height: 100%;
 }
 
 #main2.expanded{
@@ -93,26 +102,29 @@ header{
 body{
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 100vh 20vh auto;
+    grid-template-rows: 100vh 25vh auto;
     grid-template-areas: 
         "header"
         "main2"
         "main1"
     ;
     background-color: var(--color--background);
-    margin: var(--gutter-size);
     font-family: var(--font);
     font-size: var(--base-size);
     font-weight: 300;
-    margin-top: var(--small-gutter-size);
+    /* margin-top: var(--small-gutter-size); */
     color: var(--color--darkgreen);
+}
+
+header, #main1{
+    margin: var(--gutter-size);
 }
 
 /* form style */
 
 form{
     margin-top: var(--small-gutter-size);
-    margin-bottom: var(--small-gutter-size);
+    margin-bottom: calc(2*var(--gutter-size));
     display: flex;
     flex-direction: column;
     gap: var(--small-gutter-size);
@@ -146,7 +158,7 @@ input[type="checkbox"] {
     justify-items: center;
     align-items: center;
     gap: var(--small-gutter-size);
-    margin-block: var(--small-gutter-size);
+    margin-top: var(--small-gutter-size);
 }
 
 img {
@@ -209,6 +221,7 @@ img {
     bottom: var(--small-gutter-size);
     z-index: 2;
     gap: calc(0.3*var(--small-gutter-size));
+    margin: calc(-1 * var(--small-gutter-size));
 }
 
 #main2-header{
@@ -235,7 +248,6 @@ img {
 
     #main1{
         height: auto;
-        overflow: scroll;
         margin-top: var(--small-gutter-size);
     }
 
@@ -246,6 +258,11 @@ img {
         margin-left: var(--gutter-size);
         height: 100vh;
         z-index: 1;
+        padding: var(--gutter-size);
+    }
+
+    header, #main1{
+        margin: 0px;
     }
     
     body{
@@ -256,6 +273,12 @@ img {
             "header main2 main2 main2"
             "main1 main2 main2 main2"
         ;
+        margin: var(--gutter-size);
+        margin-top: var(--small-gutter-size);
+    }
+
+    form{
+        margin-bottom: calc(1.2*var(--gutter-size));;
     }
 
     #selected-images {
