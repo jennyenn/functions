@@ -75,6 +75,27 @@ header{
     text-align: center;
 }
 
+body{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 100vh 25vh auto;
+    grid-template-areas: 
+        "header"
+        "main2"
+        "main1"
+    ;
+    background-color: var(--color--background);
+    font-family: var(--font);
+    font-size: var(--base-size);
+    font-weight: 300;
+    /* margin-top: var(--small-gutter-size); */
+    color: var(--color--darkgreen);
+}
+
+header, #main1{
+    margin: var(--gutter-size);
+}
+
 #main1{
     grid-area: main1;
     margin-top: calc(1.5*var(--gutter-size));
@@ -102,30 +123,28 @@ header{
     height: 100%;
 }
 
+/* expanded */
+/* expanded */
+/* expanded */
+
 #main2.expanded{
     height: 97vh;
     z-index: 5;
 }
 
-body{
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 100vh 25vh auto;
-    grid-template-areas: 
-        "header"
-        "main2"
-        "main1"
-    ;
-    background-color: var(--color--background);
-    font-family: var(--font);
-    font-size: var(--base-size);
-    font-weight: 300;
-    /* margin-top: var(--small-gutter-size); */
-    color: var(--color--darkgreen);
+#main2.expanded img{
+    width: calc(1.5*var(--img-size));
+    height: calc(1.5*var(--img-size));
 }
 
-header, #main1{
-    margin: var(--gutter-size);
+/* found that I don't need to change the arrow direction by javascript hhhh */
+#main2.expanded button{
+    transform: rotate(90deg);
+}
+
+#main2.expanded #selected-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 /* form style */
@@ -209,17 +228,6 @@ img {
     text-align: center;
 }
 
-#result_section{
-    display: none;
-    text-align: center;
-    font-size: calc(2*var(--base-size));
-    font-weight: 500;
-}
-
-#result_section.showresult{
-    display:block;
-}
-
 #formbutton{
     display: flex;
     position: sticky;
@@ -234,7 +242,20 @@ img {
     gap: var(--small-gutter-size);
 }
 
+/* expanded */
+
+
 /* results */
+#result_section{
+    display: none;
+    text-align: center;
+    font-size: calc(1.5*var(--base-size));
+    font-weight: 500;
+}
+
+#result_section.showresult{
+    display:block;
+}
 
 #main{
     color: var(--color-main);
@@ -255,6 +276,7 @@ img {
 #result{
     border: 1px solid var(--color--red);
     border-radius: 20px;
+    font-size: calc(2*var(--base-size));
 }
 
 
