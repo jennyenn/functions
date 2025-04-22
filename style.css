@@ -12,6 +12,13 @@
     --color--red: #DF6F62;
     --color--darkgreen: #2F582C;
 
+    --color-main: #CDAD79;
+    --color-meat: #E65C50;
+    --color-vegetable: #678052;
+    --color-fruit: #0F6BB3;
+    --color-toppings: #ECB943;
+
+
     --img-size: 18vw;
 }
 
@@ -226,7 +233,33 @@ img {
     gap: var(--small-gutter-size);
 }
 
+/* results */
 
+#main{
+    color: var(--color-main);
+}
+#meat{
+    color: var(--color-meat);
+}
+#vegetable{
+    color: var(--color-vegetable);
+}
+#fruit{
+    color: var(--color-fruit);
+}
+#toppings{
+    color: var(--color-toppings);
+}
+
+#result{
+    border: 1px solid var(--color--red);
+    border-radius: 20px;
+}
+
+
+/* desktop */
+/* desktop */
+/* desktop */
 
 @media (min-width: 768px){
 
@@ -250,7 +283,7 @@ img {
 
     #main2{
         position: sticky;
-        top: 0;
+        top: var(--small-gutter-size);
         margin: var(--small-gutter-size);
         margin-left: var(--gutter-size);
         height: 100vh;
