@@ -11,6 +11,8 @@
     --color--background: #FEFAF0;
     --color--red: #DF6F62;
     --color--darkgreen: #2F582C;
+
+    --img-size: 20vw;
 }
 
 @media (min-width:768px){
@@ -37,6 +39,8 @@ header p{
     transform: rotate(-30deg) translateX(-20vw) translateY(5vh);
     z-index: 0;
     position: relative;
+    width: 30vw;
+    height: 30vw;
 }
 
 #headerBacon{
@@ -45,6 +49,8 @@ header p{
     transform: rotate(15deg) translateX(20vw) translateY(15vh);
     z-index: 0;
     position: relative;
+    width: 30vw;
+    height: 30vw;
 }
 
 #mobileimage {
@@ -53,6 +59,7 @@ header p{
     width: 100vw;
     height: 100%;
     left: 0px;
+    z-index: -5;
 }
 
 header{
@@ -76,6 +83,7 @@ header{
     border-radius: 20px;
     padding: var(--gutter-size);
     z-index: 2;
+    margin: calc(-1*var(--small-gutter-size));
 }
 
 #main2.expanded{
@@ -85,7 +93,7 @@ header{
 body{
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows:  0.7fr 0.23fr 0.7fr;
+    grid-template-rows: 100vh 20vh auto;
     grid-template-areas: 
         "header"
         "main2"
@@ -134,16 +142,16 @@ input[type="checkbox"] {
 
 
 #selected-images {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     justify-items: center;
     align-items: center;
     gap: var(--small-gutter-size);
+    margin-block: var(--small-gutter-size);
 }
 
 img {
-    width: 30vw;
-    height: 30vw;
+    width: var(--img-size);
+    height: var(--img-size);
     object-fit: contain;
 }
 
@@ -203,6 +211,10 @@ img {
     gap: calc(0.3*var(--small-gutter-size));
 }
 
+#main2-header{
+    display: flex;
+    gap: var(--small-gutter-size);
+}
 
 
 
