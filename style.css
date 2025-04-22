@@ -340,10 +340,20 @@ img {
         grid-template-columns: repeat(4, 1fr);
     }
 
+    #main2.expanded #selected-images {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
     img {
         width: 16vw;
         height: 16vw;
         object-fit: contain;
+    }
+
+    #main2.expanded img{
+        width: 16vw;
+        height: 16vw;
     }
 
     #start-button{
