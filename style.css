@@ -281,12 +281,13 @@ img {
         margin-top: var(--small-gutter-size);
     }
 
+
     #main2{
         position: sticky;
         top: var(--small-gutter-size);
-        margin: var(--small-gutter-size);
+        margin-right: var(--small-gutter-size);
         margin-left: var(--gutter-size);
-        height: 100vh;
+        max-height: 95vh;
         z-index: 1;
         padding: var(--gutter-size);
     }
@@ -326,7 +327,7 @@ img {
         display: none;
     }
 
-    #pairing-button{
+    /* #pairing-button{
         position: fixed;
         right: var(--gutter-size);
         bottom: var(--gutter-size);
@@ -342,7 +343,7 @@ img {
         width: 200px;
         z-index: 2;
         text-align: center;
-    }
+    } */
 
     #expand-main2{
         display: none;
