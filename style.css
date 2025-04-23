@@ -25,7 +25,7 @@
 	:root{
 		--base-size: 16px;
 		--gutter-size: calc(3*var(--base-size));
-        --img-size: 14vw;
+        --img-size: 13vw;
 	}
 }
 
@@ -129,7 +129,7 @@ header, #main1{
 /* expanded */
 
 #main2.expanded{
-    height: 97vh;
+    height: 88vh;
     z-index: 5;
     overflow: hidden;
 }
@@ -245,6 +245,7 @@ img {
     position: sticky;
     margin-top: calc(9*var(--gutter-size));
     z-index: 10;
+    cursor: pointer;
 }
 
 #pairing-button{
@@ -268,6 +269,7 @@ img {
     border: 1px solid var(--color--red);
     border-radius: calc(2*var(--gutter-size));
     text-align: center;
+    cursor: pointer;
 }
 
 #formbutton{
@@ -285,11 +287,10 @@ img {
 }
 
 
-
 /* results */
 #result_texts{
     display: none;
-    font-size: calc(1.5*var(--base-size));
+    font-size: calc(1.8*var(--base-size));
     font-weight: 500;
     position: relative;
     margin-block: var(--gutter-size);
@@ -343,18 +344,23 @@ img {
     color: var(--color-toppings);
 }
 
-
 #music{
-    height: 5vw;
-    width: 5vw;
+    height: 10vw;
+    width: 10vw;
     border-radius: 50%;
-    position: fixed;
-    bottom: var(--small-gutter-size);
+    position: absolute;
+    top: var(--small-gutter-size);
     right: var(--small-gutter-size);
     border: 1px solid var(--color--red);
     background-color: var(--color--background);
     padding: var(--small-gutter-size);
+    cursor: pointer;
 }
+
+#music:hover{
+    border: 2px solid var(--color--red);
+}
+
 
 /* desktop */
 /* desktop */
@@ -393,7 +399,7 @@ img {
         position: sticky;
         top: var(--small-gutter-size);
         margin-right: var(--small-gutter-size);
-        margin-left: var(--gutter-size);
+        margin-left: var(--small-gutter-size);
         max-height: 95vh;
         padding: var(--gutter-size);
     }
@@ -505,6 +511,13 @@ img {
         align-items: center;
         gap: calc(-3*var(--gutter-size));
         margin: auto;
+    }
+
+    #music{
+        height: 3vw;
+        width: 3vw;
+        position: fixed;
+        padding: calc(0.8*var(--small-gutter-size));
     }
 
 }
