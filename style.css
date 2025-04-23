@@ -32,6 +32,8 @@
 #headerImage{
     width: 80vw;
     height: auto;
+    margin-left: var(--small-gutter-size);
+    margin-top: var(--small-gutter-size);
 }
 
 header p{
@@ -410,6 +412,7 @@ h1{
 
     #headerImage{
         margin-top: calc(-1*var(--small-gutter-size));
+        margin-left:  calc(-1*var(--small-gutter-size));
     }
 
     header{
