@@ -160,9 +160,43 @@ form{
 
 fieldset{
     background-color: rgba(255, 255, 255, 0.57);
-    border: 1px solid var(--color--red);
     padding: var(--small-gutter-size);
     border-radius: var(--base-size);
+}
+
+fieldset:nth-of-type(1){
+    border: 1px solid var(--color-main);
+}
+fieldset:nth-of-type(1) legend{
+    color: var(--color-main);
+}
+
+fieldset:nth-of-type(2){
+    border: 1px solid var(--color-meat);
+}
+fieldset:nth-of-type(2) legend{
+    color: var(--color-meat);
+}
+
+fieldset:nth-of-type(3){
+    border: 1px solid var(--color-vegetable);
+}
+fieldset:nth-of-type(3) legend{
+    color: var(--color-vegetable);
+}
+
+fieldset:nth-of-type(4){
+    border: 1px solid var(--color-fruit);
+}
+fieldset:nth-of-type(4) legend{
+    color: var(--color-fruit);
+}
+
+fieldset:nth-of-type(5){
+    border: 1px solid var(--color-toppings);
+}
+fieldset:nth-of-type(5) legend{
+    color: var(--color-toppings);
 }
 
 fieldset div{
@@ -170,7 +204,6 @@ fieldset div{
     align-items: center;
     margin-bottom: 8px;
 }
-
 
 legend{
     font-family: var(--font);
@@ -255,7 +288,7 @@ img {
 /* results */
 #result_texts{
     display: none;
-    font-size: calc(2*var(--base-size));
+    font-size: calc(1.5*var(--base-size));
     font-weight: 500;
     position: relative;
     margin-block: var(--gutter-size);
@@ -442,6 +475,13 @@ img {
         padding-inline:calc(0.8*var(--gutter-size));
     }
 
+    #result_texts{
+        display: none;
+        font-size: calc(2*var(--base-size));
+        font-weight: 500;
+        position: relative;
+        margin-block: var(--gutter-size);
+    }
 
     #result_calories{
         font-size: calc(1.5*var(--base-size));
