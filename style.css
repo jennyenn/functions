@@ -345,12 +345,15 @@ img {
 
 
 #music{
-    height: var(--base-size);
-    width: var(--base-size);
+    height: 5vw;
+    width: 5vw;
     border-radius: 50%;
     position: fixed;
     bottom: var(--small-gutter-size);
     right: var(--small-gutter-size);
+    border: 1px solid var(--color--red);
+    background-color: var(--color--background);
+    padding: var(--small-gutter-size);
 }
 
 /* desktop */

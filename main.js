@@ -381,23 +381,26 @@ function resetAll(){
 }
 
 // play music
+// I took emma's link project as reference. (thank you emma)
 
 const audio = new Audio("assets/music/cafe.mp3");
 const button = document.getElementById("music");
+const playicon = document.getElementById("music-play");
+const muteicon = document.getElementById("music-mute");
 audio.loop = true;
-
-// buttons.onclick = () => {
-//     audio.play();
-// };
+audio.autoplay = true;
+// not sure why autoplay doesn't work
 
 button.addEventListener("click", () => {
+    
     // If the audio is playing, pause it, else play it
     if (audio.paused) {
         audio.play();
-        button.textContent = "⏸︎";
+        playicon.style.display = "block";
+        muteicon.style.display = "none";
     } else {
         audio.pause();
-        button.textContent = "⏵︎";
+        playicon.style.display = "none";
+        muteicon.style.display = "block";
     }
     });
-
