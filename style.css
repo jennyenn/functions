@@ -258,7 +258,7 @@ img {
     font-size: calc(2*var(--base-size));
     font-weight: 500;
     position: relative;
-    margin-top: var(--gutter-size);
+    margin-block: var(--gutter-size);
 }
 
 #result_texts.showresult{
@@ -382,6 +382,7 @@ img {
     #main2.expanded #selected-images {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        margin-bottom: var(--gutter-size);
     }
 
     img {
