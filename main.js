@@ -221,14 +221,30 @@ let expandClass = 'expanded'
 let main2 = document.querySelector('#main2')
 let expandButton = document.querySelector('#expand-main2')
 
-expandButton.onclick = () => {
-    main2.classList.toggle(expandClass);
-}
-
 let showresultClass = 'showresult'
-let textBlock = document.querySelector('#result_section')
+let textBlock = document.querySelector('#result_texts')
+let calories = document.querySelector('#result_calories')
 let pairingButton = document.querySelector('#pairing-button')
 
+
+expandButton.onclick = () => {
+    main2.classList.toggle(expandClass);
+
+    // https://stackoverflow.com/questions/5898656/check-if-an-element-contains-a-class-in-javascript
+    //https://stackoverflow.com/questions/66316521/check-if-an-element-does-not-contain-a-class-in-javascript
+    // check if the element "not" contains a class
+    if (!main2.classList.contains(expandClass)){
+        document.getElementById("result_texts").style.display = "none";
+        document.getElementById("result_calories").style.display = "none";
+    }else{
+        // if paired, it shows the results when pressing expandButton again
+        if( textBlock.classList.contains(showresultClass)){
+            document.getElementById("result_texts").style.display = "block";
+            document.getElementById("result_calories").style.display = "flex";
+        }
+       
+    }
+}
 
 pairingButton.onclick = () => {
 
@@ -246,13 +262,15 @@ pairingButton.onclick = () => {
 
     startpairing();
     textBlock.classList.add(showresultClass);
+    calories.classList.add(showresultClass);
     main2.classList.add(expandClass);
 }
 
 function startpairing(){
     console.log("clicked!");
 
-    document.getElementById("result_section").style.display = "block";
+    document.getElementById("result_texts").style.display = "block";
+    document.getElementById("result_calories").style.display = "flex";
 
     // hide all img first
     // except for the header image
@@ -354,9 +372,10 @@ function resetAll(){
         checkbox.checked = false;
     });
 
-    // #result_section display none
+    // #result display none
     // https://bito.ai/resources/display-none-in-javascript-javascript-explained/
-    document.getElementById("result_section").style.display = "none";
+    document.getElementById("result_texts").style.display = "none";
+    document.getElementById("result_calories").style.display = "none";
 
     main2.classList.remove(expandClass);
 }

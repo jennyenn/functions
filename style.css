@@ -121,6 +121,7 @@ header, #main1{
     padding: var(--small-gutter-size);
     z-index: 5;
     height: 100%;
+    position: relative;
 }
 
 /* expanded */
@@ -145,7 +146,6 @@ header, #main1{
 #main2.expanded #selected-images {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    height: 60vh;
 }
 
 /* form style */
@@ -250,19 +250,47 @@ img {
     gap: var(--small-gutter-size);
 }
 
-/* expanded */
 
 
 /* results */
-#result_section{
+#result_texts{
     display: none;
-    text-align: center;
-    font-size: calc(1.5*var(--base-size));
+    font-size: calc(2*var(--base-size));
     font-weight: 500;
+    position: relative;
+    margin-top: var(--gutter-size);
 }
 
-#result_section.showresult{
+#result_texts.showresult{
     display:block;
+}
+
+#result_calories{
+    display: none;
+    text-align: center;
+    font-size: calc(2*var(--base-size));
+    font-weight: 500;
+    position: absolute;
+    right: calc(2*var(--gutter-size));
+    bottom: var(--small-gutter-size);
+    justify-content: center;
+}
+
+#result_calories.showresult{
+    display: flex;
+    align-items: center;
+    gap: calc(-3*var(--gutter-size));
+    margin: auto;
+    justify-content: center;
+}
+
+#result{
+    font-size: calc(1.5*var(--base-size));
+    color: var(--color--red);
+    border: 1.5px solid var(--color--red);
+    border-radius: calc(2*var(--gutter-size));
+    padding-block:  calc(0.5*var(--small-gutter-size));
+    padding-inline:var(--gutter-size);
 }
 
 #main{
@@ -281,21 +309,7 @@ img {
     color: var(--color-toppings);
 }
 
-#result{
-    font-size: calc(1.5*var(--base-size));
-    color: var(--color--red);
-    border: 1.5px solid var(--color--red);
-    border-radius: calc(2*var(--gutter-size));
-    padding-block:  calc(0.5*var(--small-gutter-size));
-    padding-inline:var(--gutter-size);
-}
 
-#result_calories{
-    display: flex;
-    align-items: center;
-    gap: calc(-3*var(--gutter-size));
-    margin: auto;
-}
 
 
 /* desktop */
@@ -368,7 +382,6 @@ img {
     #main2.expanded #selected-images {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        height: 50vh;
     }
 
     img {
@@ -426,6 +439,20 @@ img {
         border-radius: var(--gutter-size);
         padding-block: calc(0.5*var(--small-gutter-size));
         padding-inline:calc(0.8*var(--gutter-size));
+    }
+
+
+    #result_calories{
+        font-size: calc(1.5*var(--base-size));
+        right: calc(1.5*var(--gutter-size));
+        bottom:0px;
+    }
+
+    #result_calories.showresult{
+        display: flex;
+        align-items: center;
+        gap: calc(-3*var(--gutter-size));
+        margin: auto;
     }
 
 }
