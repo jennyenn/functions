@@ -406,3 +406,26 @@ button.addEventListener("click", () => {
         muteicon.style.display = "block";
     }
     });
+
+
+
+
+// click button and open the menu
+
+let aboutButton = document.querySelector('#about-button')
+let modal = document.querySelector('#about') // Now one for our `dialog`.
+let closeButton = modal.querySelector('.close') // Only looking within `modal`.
+
+aboutButton.onclick = () => { // “Listen” for clicks.
+    modal.showModal() // This opens it up.
+}
+
+closeButton.onclick = () => {
+    modal.close() // And this closes it!
+}
+
+modal.onclick = (event) => { // Listen on our `modal` also…
+    if (event.target == modal) { // Only if clicks are to itself (the background).
+        modal.close() // Close it then too.
+    }
+}

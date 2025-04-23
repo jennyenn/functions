@@ -176,42 +176,6 @@ fieldset{
     border: 1px solid var(--color--red);
 }
 
-/* 
-fieldset:nth-of-type(1){
-    border: 1px solid var(--color-main);
-}
-fieldset:nth-of-type(1) legend{
-    color: var(--color-main);
-}
-
-fieldset:nth-of-type(2){
-    border: 1px solid var(--color-meat);
-}
-fieldset:nth-of-type(2) legend{
-    color: var(--color-meat);
-}
-
-fieldset:nth-of-type(3){
-    border: 1px solid var(--color-vegetable);
-}
-fieldset:nth-of-type(3) legend{
-    color: var(--color-vegetable);
-}
-
-fieldset:nth-of-type(4){
-    border: 1px solid var(--color-fruit);
-}
-fieldset:nth-of-type(4) legend{
-    color: var(--color-fruit);
-}
-
-fieldset:nth-of-type(5){
-    border: 1px solid var(--color-toppings);
-}
-fieldset:nth-of-type(5) legend{
-    color: var(--color-toppings);
-} */
-
 fieldset div{
     display: flex;
     align-items: center;
@@ -373,6 +337,66 @@ img {
     border: 2px solid var(--color--red);
 }
 
+#about{
+    width: 90vw;
+    height: 90vh;
+    background-color: var(--color--background);
+    border: 1px solid var(--color--red);
+    border-radius: 20px;
+    text-align: center;
+    margin-inline: 5vw;
+    margin-block: 5vh;
+    padding: var(--gutter-size);
+}
+
+#about-image{
+    margin-top: var(--gutter-size);
+    scale: 1.5;
+}
+
+h1{
+    font-size: calc(2*var(--base-size));
+    font-weight: 400;
+    color: var(--color--red);
+    margin-top: var(--gutter-size);
+}
+
+#about p{
+    margin-top: var(--small-gutter-size);
+}
+
+#about-button{
+    height: 10vw;
+    width: 10vw;
+    border-radius: 50%;
+    position: absolute;
+    top: var(--small-gutter-size);
+    left: var(--small-gutter-size);
+    border: 1px solid var(--color--red);
+    background-color: var(--color--background);
+    padding:calc(0.2*var(--small-gutter-size));
+    cursor: pointer;
+    color: var(--color--red);
+    font-size: larger;
+    text-align: center;
+}
+
+#about-button:hover{
+    border: 2px solid var(--color--red);
+}
+
+.close {
+	font-family: var(--context-font);
+	font-size: calc(1.5*var(--base-size));
+	position: absolute;
+	right: var(--gutter-size);
+	top: var(--gutter-size);
+}
+
+.close:hover{
+	cursor: pointer;
+}
+
 
 /* desktop */
 /* desktop */
@@ -517,6 +541,40 @@ img {
         padding: calc(0.8*var(--small-gutter-size));
     }
 
+
+    #about{
+        width: 70vw;
+        height: 70vh;
+        margin-inline: 15vw;
+        margin-block: 15vh;
+        padding: var(--gutter-size);
+        padding-inline: calc(1.5*var(--gutter-size));
+    }
+
+    h1{
+        margin: var(--small-gutter-size);
+    }
+
+    #about p{
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    #about-image{
+        margin-top: var(--small-gutter-size);
+        scale: 1.2;
+    }
+
+    #about-button{
+        height: 3vw;
+        width: 3vw;
+        border-radius: 50%;
+        position: fixed;
+        top: calc(1.5*var(--gutter-size));
+        right: var(--small-gutter-size);
+        left: auto;
+        padding:calc(0.2*var(--small-gutter-size));
+    }
 
     #pic-main, #pic-meat, #pic-vegetable, #pic-fruit, #pic-toppings{
         position: relative;
