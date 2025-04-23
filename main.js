@@ -364,7 +364,7 @@ function startpairing(){
 
 function resetAll(){
     // hide all images
-    document.querySelectorAll("img:not(#headerImage):not(#headerToast):not(#headerBacon):not(#music-play):not(#music-mute):not(#pic-main):not(#pic-meat):not(#pic-vegetable):not(#pic-fruit):not(#pic-toppings:not(#about-image)").forEach(img => {
+    document.querySelectorAll("img:not(#headerImage):not(#headerToast):not(#headerBacon):not(#music-play):not(#music-mute):not(#pic-main):not(#pic-meat):not(#pic-vegetable):not(#pic-fruit):not(#pic-toppings):not(#about-image)").forEach(img => {
         img.style.display = "none";
     });
 
