@@ -44,7 +44,7 @@ header p{
 #headerToast{
     scale: 1.5;
     filter: opacity(0.5);
-    transform: rotate(-30deg) translateX(-20vw) translateY(5vh);
+    transform: rotate(-30deg) translateX(-20vw) translateY(3vh);
     z-index: 0;
     position: relative;
     width: 30vw;
@@ -54,7 +54,7 @@ header p{
 #headerBacon{
     scale: 1.8;
     filter: opacity(0.5);
-    transform: rotate(15deg) translateX(20vw) translateY(15vh);
+    transform: rotate(15deg) translateX(20vw) translateY(12vh);
     z-index: 0;
     position: relative;
     width: 30vw;
@@ -68,6 +68,14 @@ header p{
     height: 100%;
     left: 0px;
     z-index: -5;
+}
+
+#pic-main, #pic-meat, #pic-vegetable, #pic-fruit, #pic-toppings{
+    position: relative;
+    width: 30vw;
+    scale: 3;
+    filter: opacity(0.05);
+    transform: rotate(-40deg) translateX(20vw) translateY(4vh);
 }
 
 header{
@@ -163,8 +171,12 @@ fieldset{
     background-color: rgba(255, 255, 255, 0.57);
     padding: var(--small-gutter-size);
     border-radius: var(--base-size);
+    overflow: hidden;
+    height: 35vh;
+    border: 1px solid var(--color--red);
 }
 
+/* 
 fieldset:nth-of-type(1){
     border: 1px solid var(--color-main);
 }
@@ -198,7 +210,7 @@ fieldset:nth-of-type(5){
 }
 fieldset:nth-of-type(5) legend{
     color: var(--color-toppings);
-}
+} */
 
 fieldset div{
     display: flex;
@@ -458,25 +470,6 @@ img {
         font-size: calc(1.2*var(--base-size));
     }
 
-    /* #pairing-button{
-        position: fixed;
-        right: var(--gutter-size);
-        bottom: var(--gutter-size);
-        width: 400px;
-        z-index: 2;
-        text-align: center;
-       
-    }
-
-    #reset-button{
-        position: fixed;
-        right: calc(9.5*var(--gutter-size));
-        bottom: var(--gutter-size);
-        width: 200px;
-        z-index: 2;
-        text-align: center;
-    } */
-
     #main2.expanded{
         height: 98vh;
     }
@@ -522,6 +515,15 @@ img {
         width: 3vw;
         position: fixed;
         padding: calc(0.8*var(--small-gutter-size));
+    }
+
+
+    #pic-main, #pic-meat, #pic-vegetable, #pic-fruit, #pic-toppings{
+        position: relative;
+        width: 30vw;
+        scale: 1.7;
+        filter: grayscale(1) opacity(0.08);
+        transform: rotate(-45deg) translateX(3vw) translateY(4vh);
     }
 
 }
