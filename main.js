@@ -246,6 +246,8 @@ expandButton.onclick = () => {
     }
 }
 
+const sound = new Audio("assets/music/pairing.mp3")
+
 pairingButton.onclick = () => {
 
     // https://stackoverflow.com/questions/28543611/in-js-are-a-b-c-and-a-ba-cb-c-the-same-sorry-for-m
@@ -260,6 +262,7 @@ pairingButton.onclick = () => {
         return;
     }
 
+    sound.play();
     startpairing();
     textBlock.classList.add(showresultClass);
     calories.classList.add(showresultClass);
@@ -380,7 +383,7 @@ function resetAll(){
 }
 
 // play music
-// I took emma's link project as reference. (thank you emma)
+// I took emma's link project as reference. (thank you emma) and I also google it to see how other people do (but I forgot to paste the link :()
 
 const audio = new Audio("assets/music/cafe.mp3");
 const button = document.getElementById("music");
