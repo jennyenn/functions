@@ -380,3 +380,24 @@ function resetAll(){
     main2.classList.remove(expandClass);
 }
 
+// play music
+
+const audio = new Audio("assets/music/cafe.mp3");
+const button = document.getElementById("music");
+audio.loop = true;
+
+// buttons.onclick = () => {
+//     audio.play();
+// };
+
+button.addEventListener("click", () => {
+    // If the audio is playing, pause it, else play it
+    if (audio.paused) {
+        audio.play();
+        button.textContent = "⏸︎";
+    } else {
+        audio.pause();
+        button.textContent = "⏵︎";
+    }
+    });
+

@@ -131,6 +131,7 @@ header, #main1{
 #main2.expanded{
     height: 97vh;
     z-index: 5;
+    overflow: hidden;
 }
 
 #main2.expanded img{
@@ -343,7 +344,14 @@ img {
 }
 
 
-
+#music{
+    height: var(--base-size);
+    width: var(--base-size);
+    border-radius: 50%;
+    position: fixed;
+    bottom: var(--small-gutter-size);
+    right: var(--small-gutter-size);
+}
 
 /* desktop */
 /* desktop */
